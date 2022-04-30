@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>分类: 技术人生 - Robin&#039;s Den</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Robin&#039;s Den"><meta name="msapplication-TileImage" content="/img/avatar.jpg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Robin&#039;s Den"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Robin，80后，主业iOS开发，移动开发者，热爱技术，学习中。很高兴能够在这里与你分享对技术对生活的思考与记录。"><meta property="og:type" content="blog"><meta property="og:title" content="Robin&#039;s Den"><meta property="og:url" content="https://zycslog.github.io/"><meta property="og:site_name" content="Robin&#039;s Den"><meta property="og:description" content="Robin，80后，主业iOS开发，移动开发者，热爱技术，学习中。很高兴能够在这里与你分享对技术对生活的思考与记录。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://zycslog.github.io/img/og_image.png"><meta property="article:author" content="Robin"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zycslog.github.io"},"headline":"Robin's Den","image":["https://zycslog.github.io/img/og_image.png"],"author":{"@type":"Person","name":"Robin"},"publisher":{"@type":"Organization","name":"Robin's Den","logo":{"@type":"ImageObject","url":"https://zycslog.github.io/img/avatar.jpg"}},"description":"Robin，80后，主业iOS开发，移动开发者，热爱技术，学习中。很高兴能够在这里与你分享对技术对生活的思考与记录。"}</script><link rel="icon" href="/img/avatar.jpg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/avatar.jpg" alt="Robin&#039;s Den" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于我</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/zycslog"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">技术人生</a></li></ul></nav></div></div><div class="card"><div class="card-image"><a class="image is-7by3" href="/2022/04/30/2019-08-31-mind-flower/"><img class="fill" src="/images/mindflower.png" alt="思维的火花 --- 大数据与数据思维"></a></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-30T06:35:13.801Z" title="4/30/2022, 2:35:13 PM">2022-04-30</time>发表</span><span class="level-item"><time dateTime="2022-04-30T07:45:36.919Z" title="4/30/2022, 3:45:36 PM">2022-04-30</time>更新</span><span class="level-item"> Robin </span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/">技术人生</a></span><span class="level-item">30 分钟读完 (大约4481个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/30/2019-08-31-mind-flower/">思维的火花 --- 大数据与数据思维</a></h1><div class="content"><p>在电子设备飞速发展的今天，互联网、移动互联网都已经非常成熟，物联网也在搭建的过程中。对于我们来说4G时代好像还刚开始，5G就即将来临了。每个人、每时每刻都在产生着数据，面对着庞大的数据体量，却只有相对少数的人能够使用正确的方式， 在合适的时机，创造出合适的产品等等。凭借着数据，也诞生了一些新兴的企业或者行业，有人调侃能够使用数据去了解当下，预知未来的视角是先知的视角，从普通的一个广告投放，到预测并影响美国总统大选，从企业门店选址，到智能化精准医疗，数据均是主角，数据为何能够如此的神奇，好像无所不能呢？在了解其本质之前，可能需要先了解一下什么是大数据？什么是大数据时代？</p>
+<h1 id="一、数据与大数据"><a href="#一、数据与大数据" class="headerlink" title="一、数据与大数据"></a>一、数据与大数据</h1><h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><p>关于什么是数据？维基百科是这样解释的：“数据（英语：data），是指未经过处理的原始记录。一般而言，数据缺乏组织及分<br>类，无法明确的表达事物代表的意义，它可能是一堆的杂志、一大叠的报纸、数种的开会记录或是整本病人的病历纪录。数据描述事物的符号记录，是可定义为意义的实体，涉及事物的存在形式。是关于事件之一组离散且客观的事实描述，是构成消息和知识的原始材料。”</p>
+<p>而在计算机的世界里，数据并不是物理世界真实存在的客观事物，而是对客观事物的性质、状态以及相互关系进行记载的物理符号或者物理符号的组合，是可以进行鉴别的符号等。符号不仅指狭义上的数字，还可能是具有一定意义的文字、字符、数字符号的组合，以及图像、视频、音频等等，也可以是客观事物的属性、数量、位置及其相互关系的抽象表示。例如，“0、1、2…&#96;”、“阴、雨、下降、气温”“学生的档案记录、货物的运输情况”等都是数据。<br>简而言之，凡是能够被电子化记录的都是数据。</p></div><a class="article-more button is-small is-size-7" href="/2022/04/30/2019-08-31-mind-flower/#more">阅读更多</a></article></div><div class="card"><div class="card-image"><a class="image is-7by3" href="/2022/04/30/2019-03-23-transition/"><img class="fill" src="/images/transition/cover.jpg" alt="如何完成技术跃迁"></a></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-30T06:35:13.798Z" title="4/30/2022, 2:35:13 PM">2022-04-30</time>发表</span><span class="level-item"><time dateTime="2022-04-30T07:45:13.181Z" title="4/30/2022, 3:45:13 PM">2022-04-30</time>更新</span><span class="level-item"> Robin </span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/">技术人生</a></span><span class="level-item">1 小时读完 (大约10762个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/30/2019-03-23-transition/">如何完成技术跃迁</a></h1><div class="content"><p>前言：近期又到了毕业招聘季，我作为技术分享嘉宾，回到母校参加宣讲会，做了一个主题为《如何在毕业三年完成技术跃迁》的分享，本文由此次分享整理而成，并改名为《如何完成技术跃迁》，希望能够给刚进入职场的程序员，或者卡在瓶颈期的程序员，带来一些指导，在技术的道路上少走些弯路。请注意，本文源于我的经验思考，非教条或准则，仅供参考。另由于本人主要的项目经验来源于App端（主要是iOS、Android），Web前端及后端只是稍有涉猎，因此文中的例子大多也来自App端，其他端同学可能会觉得陌生，但应该不会影响理解。</p>
+<p>本文约1W字，阅读时长大概二十分钟，稍有啰嗦，请见谅。 </p>
+<h1 id="1-什么是技术跃迁"><a href="#1-什么是技术跃迁" class="headerlink" title="1. 什么是技术跃迁"></a>1. 什么是技术跃迁</h1><p>首先，我们需要明确一个定义，什么是技术跃迁？在说技术跃迁之前，跟大家解释下跃迁这个词。</p>
+<p>”跃迁“，来源于量子力学，说的是微观状态发生跳跃式变化的过程，比如从低能态跳跃到高能态，需要注意的是：因为微观粒子的状态是分立的，也即是非连续性的，所以这个变化是跳跃性的。用这个词来说明技术的成长，个人认为是非常合适的。</p></div><a class="article-more button is-small is-size-7" href="/2022/04/30/2019-03-23-transition/#more">阅读更多</a></article></div><div class="card"><div class="card-image"><a class="image is-7by3" href="/2022/04/30/2019-10-23-what-is-event-modeling/"><img class="fill" src="/images/img/hero.jpg" alt="What is Event Modeling?"></a></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-30T06:34:32.167Z" title="4/30/2022, 2:34:32 PM">2022-04-30</time>发表</span><span class="level-item"><time dateTime="2022-04-30T06:34:32.168Z" title="4/30/2022, 2:34:32 PM">2022-04-30</time>更新</span><span class="level-item"> Robin </span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/">技术人生</a></span><span class="level-item">27 分钟读完 (大约4029个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/30/2019-10-23-what-is-event-modeling/">What is Event Modeling?</a></h1><div class="content"><p>Event Modeling is a way to design a blueprint for an Information System of any size or scale. It is done in a way that allows the clearest communication of the system’s workings to the largest possible cross-section of roles in an organization. The system can be checked for completeness by following the single thread of data propagation through it.</p>
+<h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><h3 id="Moore’s-Law"><a href="#Moore’s-Law" class="headerlink" title="Moore’s Law"></a>Moore’s Law</h3><p>Digitized Information Systems are a relatively new concept. Humans have been working with information systems for thousands of years. Over centuries banks, insurance companies and many other large scale organizations have managed to succeed.</p>
+<p>With the advent of the transistor, the speed and accuracy of processing information increased by orders of magnitude. What did not gain the same quantum leap is digital storage. This imbalance caused information systems to be optimized for a very small amount of online information. You can see this in the advent of RDBMS technology. What it mean is that the compromise was to throw information away.</p>
+<h3 id="Human-Memory"><a href="#Human-Memory" class="headerlink" title="Human Memory"></a>Human Memory</h3><p>Story telling is something that enables humans to pass knowledge on to subsequent generations and relies heavily on how we store memories - whether logical, visual, auditory or other. This is important because there is a parallel with how information systems were constructed. There is a “memory” of all your visits to the doctor. It’s the ledger of the forms that are filled in with each visit.</p>
+<p>Specifications by example are a way to show how something is supposed to work. This can be seen in successful practices in software such as Behaviour Driven Development. This works well because we communicate by stories more effectively. It ties back to story telling as a way to keep information in society. Our brains are built for it more than they are built for flow-charts and other formats. </p>
+<h2 id="Life-After-the-Dawn-of-the-Computer-Age"><a href="#Life-After-the-Dawn-of-the-Computer-Age" class="headerlink" title="Life After the Dawn of the Computer Age"></a>Life After the Dawn of the Computer Age</h2><p>In recent decades, Moore’s Law from the side of online storage has caught up. This means that after the initial few decades of living with computer systems, our information systems that are now digitized can use the mechanics that made them effective throughout history.</p>
+<p>This means we have enough storage to not throw away information. The ability to be able to keep a history of all that has happened allows systems to be more reliable by means of audit and specification by example that literally translates to how the system is implemented.</p>
+<p>We also have enough storage to have a cache of different views into what has happened in the system. This is important as we now have made the task of trying to fit all our concerns into one model an unnecessary constraint. In 1956, an IBM harddrive that stored 10MB cost $1M and required $30K monthly budget.</p>
+<h3 id="Reality-of-Current-Tooling"><a href="#Reality-of-Current-Tooling" class="headerlink" title="Reality of Current Tooling"></a>Reality of Current Tooling</h3><p>So we are now at a cross-roads where we have very mature tooling, but that tooling is made for solving a problem we no longer have - being efficient with storage constraints. The new tooling that we see on the rise is what information systems always had: a ledger of what happened - storage is not a major issue anymore. There are many benefits to keeping ledger. They represent the natural way we think about systems - digital or not.</p>
+<h2 id="The-Model-That-Works"><a href="#The-Model-That-Works" class="headerlink" title="The Model That Works"></a>The Model That Works</h2><p><img src="/images/event-modeling/blueprint_large.jpg" alt="blueprint"></p>
+<p>Time is a concept that is now a core piece of describing a system. The components and classes that we saw in computing are not as important. We can show, by example, what a system is supposed to do from start to finish, on a time line and with no branching - again to make use of that memory aspect of our brains. This is the Event Model. It is used to follow all field values in the UI to the storage of those value to where they finally end up on a report or a screen. It’s generally done with sticky notes on a wall or whiteboard - or an online version of a whiteboard. We’ll see that simplicity is at the heart of the approach as we will only use 3 types of building blocks as well as traditional wireframes or mockups. Further to keep things simple, we will rely on only 4 patterns of how we structure the diagram.</p>
+<h3 id="Simplicity"><a href="#Simplicity" class="headerlink" title="Simplicity"></a>Simplicity</h3><p>When we want to adopt certain practices or processes to help one another understand and communicate, it is inversely proportional to the amount of learning individuals must do to be proficient in those methods. Put in another way, if an organization chooses to adopt a process called “X”, and X requires one book and a workshop that takes a week to go through, it nullifies the effectiveness of X, and here’s the worst part, <strong>no matter how good X is</strong>.</p>
+<p>When the book is a required reading by the people in an organization, everyone will say they have read it; only half will have actually read it; half of those will claim they understood it; and only half of those will have understood it; and half of those will be able to apply it.</p>
+<p>This is why Event Modeling only uses 3 moving pieces and 4 patterns based on 2 ideas. It takes a few minutes to explain and the rest of the learning is done in practice, transparently where any deficiencies in the understanding of even those few core ideas are quickly corrected.</p>
+<p>This is how you get to an understanding in an organization.</p>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><p>Let’s say we want to design a hotel website for a hotel chain for allowing our customers to book rooms online and for us to schedule cleaning and any other hotel concerns. We can show what events, or facts, are stored on a timeline of the year in that business. We can pretend we have the system already and ask ourselves what facts were stored as we move forward through time.</p>
+<h3 id="Wireframes"><a href="#Wireframes" class="headerlink" title="Wireframes"></a>Wireframes</h3><p>To bring in the visual part of story-telling we show wireframes or web page mockups across the top. These can be organized in swim-lanes to show different people (or sometimes systems) interacting with our system. We also show any automation here with a symbol like gears to illustrate that the system is doing something. This has an easy to understand set of mechanics of a todo list that a process goes and does and marks items as done. In our hotel example, this could be a payment system or notification system.</p>
+<p><img src="/images/event-modeling/innovate_large.jpg" alt="innovation"></p>
+<p>At this point we have enough to be able to design some systems with some UX&#x2F;UI people. But there are 2 very fundamental pieces that must be added to the blueprint which show 2 core features of any information system: Empowering the user and informing the user.</p>
+<h3 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h3><p>Most information systems must give an ability for a user to affect state of the system. In our example, we must allow the booking of a room to change the system so that we don’t over-book and when that person arrives at that future date, they have a room ready for them.</p>
+<p>Intentions to change the system are encapsulated in a command. As opposed to simply saving form data to a table in a database, this allows us to have a non-technical way to show the intentions while allowing any implementation - although certain ones have advantages as we will see.</p>
+<p><img src="/images/event-modeling/empower_large.jpg" alt="empower"></p>
+<p>From the UI and UX perspective this drives a “command based UI” which goes a long way into helping make composable UIs. With this pattern, it’s a lot clearer what the transactional boundaries are both from the technical and business perspectives. The hotel guest either registered successfully or not.</p>
+<p>When there are nuances to what the prerequisites are for having a command succeed, they are elaborated on “Given-When-Then” style specifications. This is, again, a way to tell a story of what success looks like. There may be a few of these stories to show how a command can and cannot succeed.</p>
+<p>An example might be “<strong>Given</strong>: We have registered, and added a payment method, <strong>When</strong>: We try to book a room, <strong>Then</strong>: a room is booked.” This form of specification is also referred to as “Arrange, Act, Assert” and in the UX&#x2F;UI world “Situation, Motivation, Value”.</p>
+<h3 id="Views-or-Read-Models"><a href="#Views-or-Read-Models" class="headerlink" title="Views (or Read Models)"></a>Views (or Read Models)</h3><p>The second part of any information system is the ability to inform the user about the state of the system. Our hotel guest should know about what days are available for certain types of rooms they are interested in staying in. There are usually many of these and support the multi-model aspect of information systems.</p>
+<p><img src="/images/event-modeling/inform_large.jpg" alt="inform"></p>
+<p>A view into the facts already in the system has been changing as these new events were being stored. In our hotel system, this calendar view was being updated as new events that affected inventory were happening. Other views may be for the cleaning staff to see which rooms are ready to be cleaned as events about guests checking out are being stored.</p>
+<p>Specifying how a view behaves is very similar to the way we specify how we accept commands with one difference. The views are passive and cannot reject an event after it’s been stored in the system. We have “<strong>Given</strong>: hotel is set up with 12 ocean view rooms, ocean view room was booked from April 4th - 12th X 12, <strong>Then</strong>: the calendar should show all dates except April 4th - 12th for ocean view availability”.</p>
+<h3 id="Integration"><a href="#Integration" class="headerlink" title="Integration"></a>Integration</h3><p>We just covered the first 2 patterns of the 4 that are needed to describe most systems. Systems can get information from other systems and send information to other systems. It would be tempting to force these 2 patterns to be an extension of the first 2 and share the same space. However, these interactions are harder to communicate as they don’t have that human-visible aspect to them and require some higher level patterns.</p>
+<h3 id="Translation"><a href="#Translation" class="headerlink" title="Translation"></a>Translation</h3><p>When we have an external system that’s providing us with information, it’s helpful to translate that information into a form that is more familiar in our own system. In our hotel system, we may get events from guests’ GPS coordinates if they opted in to our highly reactive cleaning crew. We would not want to use longitude and latitude pairs as events to specify preconditions in our system. We would rather have events that mean something to us like “Guest left hotel”, “Guest returned to hotel room”.</p>
+<p><img src="/images/event-modeling/understand_large.jpg" alt="understand"></p>
+<p>Often, translations are simple enough to represent as views that get their information from external events. If we don’t use them as any “Given” parts of tests, the values they store in that view model are simply represented in the command parameters in our state change tests.</p>
+<h3 id="Automation"><a href="#Automation" class="headerlink" title="Automation"></a>Automation</h3><p>Our system is going to need to communicate with external services. When the guests in our hotel are paying for their stay when they check out, our system makes a call to a payment processor. We can make the concept of how this occurs with the idea of a “todo list” for some processor in our system. This todo list shows tasks we need to complete. Our processor goes through that list from time to time (could be milliseconds or days) and sends out a command to the external system to process the payment, as an example. The reply from the external system is then translated into an event that we store back in our system. This way we keep the building blocks that we use in our system as something that’s meaningful to us.</p>
+<p><img src="/images/event-modeling/automate_large.jpg" alt="automate"></p>
+<p>We show this by putting a processor in the top of our blueprint which has the wireframes. This shows that there are things not evident on the screen but are happening behind the scenes. A user may expect a spinning icon to indicate a delay due to background tasks needing to finish. The specification for this has the form of “<strong>Given</strong>: A view of the tasks to do, <strong>When</strong> This command is launched for each item, <strong>Then</strong> These events are expected back.”</p>
+<p>In reality, these may be implemented in many different ways such as queues, reactive or real-time constructs. They may even actually be manual todo lists that our employees use. The goal here is to communicate how our system communicates with the outside world when it needs to affect it. </p>
+<h2 id="Workshop-Format-The-7-Steps"><a href="#Workshop-Format-The-7-Steps" class="headerlink" title="Workshop Format - The 7 Steps"></a>Workshop Format - The 7 Steps</h2><p>Event Modeling is done in 7 steps. We explained the end-goal already. So let’s rewind to the beginning and show how to build up to the blueprint:</p>
+<h3 id="1-Brain-Storming"><a href="#1-Brain-Storming" class="headerlink" title="1. Brain Storming"></a>1. Brain Storming</h3><p><img src="/images/event-modeling/Step-1_large.jpg" alt="Step 1"></p>
+<p>We have someone explain the goals of the project and other information. The participants then envision what system would look and behave like. They put down all the events that they can conceive of having happened. Here we gently introduce the concept that only state-changing events are to be specified. Often, people will name “guest viewed calendar for room availability”. We put those aside for now - they are not events.</p>
+<h3 id="2-The-Plot"><a href="#2-The-Plot" class="headerlink" title="2. The Plot"></a>2. The Plot</h3><p><img src="/images/event-modeling/Step-2_large.jpg" alt="Step 2"></p>
+<p>Now the task is to create a plausible story made of these events. So they are arranged in a line and everyone reviews this time line to understand that this makes sense as events that happen in order.</p>
+<h3 id="3-The-Story-Board"><a href="#3-The-Story-Board" class="headerlink" title="3. The Story Board"></a>3. The Story Board</h3><p><img src="/images/event-modeling/Step-3_large.jpg" alt="Step 3"></p>
+<p>Next, the wireframes or mockups of the story are needed to address those that are visual learners. More importantly, each field must be represented so that the blueprint for the system has the source of and destination of the information represented from the user’s perspective.</p>
+<h4 id="3-1-UX-Concurrency"><a href="#3-1-UX-Concurrency" class="headerlink" title="3.1 UX Concurrency"></a>3.1 UX Concurrency</h4><p>The wireframes are generally put at the top of the blueprint. They can be divided into separate swimlanes to show what each user sees if there is more than one. There are no screens that appear above one another as we need to capture each change in the system state as a separate vertical slice of the blueprint. The different ordering can be shown in the various specifications. If it is core to the system or very important to communicate, alternate workflows will need to be added to the blueprint. This is part of the last step that shows organization but can be done earlier if helpful.</p>
+<h3 id="4-Identify-Inputs"><a href="#4-Identify-Inputs" class="headerlink" title="4. Identify Inputs"></a>4. Identify Inputs</h3><p><img src="/images/event-modeling/Step-4_large.jpg" alt="Step 4"></p>
+<p>From the earlier section we saw that we need to show how we enable the user to change the state of the system. This is usually the step in which we do this introduction of these blue boxes. Each time an event is stored due to a users action, we link that to the UI by a command that shows what we are getting from the screen or implicitly from client state if it’s a web application.</p>
+<h3 id="5-Identify-Outputs"><a href="#5-Identify-Outputs" class="headerlink" title="5. Identify Outputs"></a>5. Identify Outputs</h3><p><img src="/images/event-modeling/Step-5_large.jpg" alt="Step 5"></p>
+<p>Again looking back at our goals for the blueprint, we now have to link information accumulated by storing events back into the UI via views (aka read-models). These may be things like the calendar view in our hotel system that will show the availability of rooms when a user is looking to book a room. </p>
+<h3 id="6-Apply-Conway’s-Law"><a href="#6-Apply-Conway’s-Law" class="headerlink" title="6. Apply Conway’s Law"></a>6. Apply Conway’s Law</h3><p><img src="/images/event-modeling/Step-6_large.jpg" alt="Step 6"></p>
+<p>Now that we know how information gets in and out of our system, we can start to look at organizing the events themselves into swimlanes. We need to do this to allow the system to exist as a set of autonomous parts that separate teams can own. This allows specialization to happen to a level that we control instead of falling out of the composition of teams. See <a target="_blank" rel="noopener" href="http://melconway.com/Home/Conways_Law.html">Conway’s Law</a> by Mel Conway.</p>
+<h3 id="7-Elaborate-Scenarios"><a href="#7-Elaborate-Scenarios" class="headerlink" title="7. Elaborate Scenarios"></a>7. Elaborate Scenarios</h3><p>Each workflow step is tied to either a command or a view&#x2F;read-model. The specifications were explained earlier on. How we make them is still collaboratively with all participants in the same space. A Give-When-Then or Given-Then can be constructed one after the other very rapidly while being reviewed by multiple role representatives. This allows what is traditionally done as user story writing by a dedicated product owner in isolation in a text format, to be done visually in a very small amount of time collaboratively. What’s very critical here, is that each specification is tied to exactly one command or view.</p>
+<h3 id="Completeness-Check"><a href="#Completeness-Check" class="headerlink" title="Completeness Check"></a>Completeness Check</h3><p>At this time the event model should have every field accounted for. All information has to have an origin and a destination. Events must facilitate this transition and hold the necessary fields to do so. This rigor is what is required to get the most benefits of the technique.</p>
+<p>A variation of this is where we don’t do this final check and rely on absorbing the rework costs. There are scenarios where this is desired.</p>
+<h2 id="Project-Management"><a href="#Project-Management" class="headerlink" title="Project Management"></a>Project Management</h2><p>The final output of the exercise if done to completion is a set of very small projects defined by all the scenarios for each workflow step. They are in a format that allows them to be directly translated to what developers will use to make their unit tests. They are also coupled to the adjacent workflow steps by only the contract.</p>
+<p><img src="/images/event-modeling/parallel_large.jpg" alt="parallel effort"></p>
+<h3 id="Strong-Contracts"><a href="#Strong-Contracts" class="headerlink" title="Strong Contracts"></a>Strong Contracts</h3><p>Many project management, business and coordination issues are mitigated by the fact that we have made explicit contracts as to the shape of the information of when we start a particular step of the workflow and what is the shape of the data when it’s finished. These pre- and post-conditions are what allows the work to be completed in relative isolation and later snap together with the adjoining steps as designed.</p>
+<h4 id="Flat-Cost-Curve"><a href="#Flat-Cost-Curve" class="headerlink" title="Flat Cost Curve"></a>Flat Cost Curve</h4><p>The biggest impact of using Event Modeling is the flat cost curve of the average feature cost. This is due to the fact that the effort of building each workflow step is not impacted by the development of other workflows. One important thing to understand, is that a workflow step is considered to be repeated on the event model if it uses the same command or view. </p>
+<p><img src="/images/event-modeling/flat-cost-curve.jpg" alt="flat cost curve"></p>
+<p>The impact of this is very far reaching because it is what changes software development back into an engineering practice. It’s what makes creating an information system work like the construction of a house. Features can be created in any order. Traditional development cannot rely on estimates because whether the feature gets developed early on versus later in the project impacts the amount of work required. Reprioritizing work makes any previous estimates unreliable.</p>
+<h4 id="Done-is-Done-Done-Right"><a href="#Done-is-Done-Done-Right" class="headerlink" title="Done is Done Done Right"></a>Done is Done Done Right</h4><p>When a workflow step is implemented, the act of implementing any other workflow step does not cause the need to revisit this already complete workflow step. It’s the reason that the constant feature cost curve can be realized.</p>
+<h4 id="Estimates-without-Estimating"><a href="#Estimates-without-Estimating" class="headerlink" title="Estimates without Estimating"></a>Estimates without Estimating</h4><p>With a constant cost curve, the effort for an organization to implement can simply be measured over many features over time. This is an impartial way to empirically determine the velocity of teams. These numbers are then used to scope, schedule and cost out future projects.</p>
+<h5 id="Technical-Side-Note-About-Test-Driven-Development"><a href="#Technical-Side-Note-About-Test-Driven-Development" class="headerlink" title="Technical Side-Note About Test Driven Development"></a>Technical Side-Note About Test Driven Development</h5><p>This is the impact of the adoption of Agile practices in the industry to put band-aids over the core issue of lack of design. Because the scope of each set of requirements is now per workflow step, the refactoring step of TDD does not impact other workflow steps in the event model. When we don’t have an event model, refactoring goes unrestricted and previously completed pieces of work have to be adjusted. The more work is already completed, the more that has to be reviewed and adjusted with each new addition as we build the solution.</p>
+<h4 id="Subcontracting"><a href="#Subcontracting" class="headerlink" title="Subcontracting"></a>Subcontracting</h4><p>The constant cost curve gives the opportunity to do fixed-cost projects. Once there is a velocity established for a team, you have the cost of the software for your organization. With this number, you now can price out what you are willing to give contractors in pay for each workflow step they complete.</p>
+<h5 id="Guarantees"><a href="#Guarantees" class="headerlink" title="Guarantees"></a>Guarantees</h5><p>Since each workflow step is protected from being affected by other workflow steps, any deficiencies are to be guaranteed by who is delivering them with non-billable work. So in the case of a subcontractor doing a bad job just to get more billable items done quickly, they will have to have the next hours of work dedicated to fixing deficiencies of work already done before. This evens out their effective rate of pay because they are not working on new delivarables.</p>
+<p>This can be carried out over longer periods within an employee engagement by making these metrics available through different checkpoints for performance.</p>
+<p>Due to the effective pay self-adjusting to the capability of the individual, it is also a way to on-board new employees and pay them fairly while they are in the probation stage of the engagement. This contract-to-hire process removes the subjective and largely ineffective interview process for technical positions.</p>
+<h4 id="Prioritization"><a href="#Prioritization" class="headerlink" title="Prioritization"></a>Prioritization</h4><p>Moving work on a schedule as to what steps are going to be implemented first is done without changing the estimated costs of each item. This ensures that prioritization of work has no impact in the total cost also. The constant cost curve is required to allow this “agility” of reprioritizing features.</p>
+<h4 id="Change-Management"><a href="#Change-Management" class="headerlink" title="Change Management"></a>Change Management</h4><p>When the plans change, we simply adjust the event model. This is usually done by just copying the current one and adjusting. Now we can see where the differences are. If a new piece of information is added to one event, that constitutes a new version of the workflow that creates it. Same with the views. If these have not been implemented yet, they don’t change our estimate. If they are already implemented, they add another unit of work to our plan because it’s considered a replacement. There are a few more rules around this. The end result is a definitive guide for change management.</p>
+<h2 id="Security"><a href="#Security" class="headerlink" title="Security"></a>Security</h2><p><img src="/images/event-modeling/arrows_large.jpg" alt="security arrows"></p>
+<p>With an event model, the solution shows exactly where, and equally importantly, when sensitive data crosses boundaries. With traditional audits, the number of interviews with staff was time consuming and at risk of missing important areas. Security concerns are addressed most responsibly when the applications have an event model to reference.</p>
+<h2 id="Legacy-Systems"><a href="#Legacy-Systems" class="headerlink" title="Legacy Systems"></a>Legacy Systems</h2><p>Most of the scenarios that real organizations face is where a system is already in place. The main way to deal with a system that is hard to manage because of complexity and lack of understanding is to either rewrite it or to refactor it while it runs. Both of these are very costly.</p>
+<p>A third, less risky option exists: Freeze the old system. With proper buy-in, the organization can agree to not alter the existing system. Instead, dealing with bugs and adding new functionality is done on the side as a side-car solution.</p>
+<p>Events can be gathered from the database of the old system and make views of that state - employing the <a href="#translation">translate</a> pattern described previously. Y-valve redirection of user action can add new functionality in the side solution. An example which fixes a bug (notice that we use the <a href="./#automation">external integration pattern</a> and extends the old system to add profile pictures is shown here:</p>
+<p><img src="/images/event-modeling/event-modeling-legacy-side-car.jpg" alt="legacy side car event model"></p>
+<p>This pattern allows an organization to stop putting energy into the sub-optimal existing system and get unblocked from delivering value via the patterns that enable the benefits of the Event Model.</p>
+<h2 id="Conclusion-for-Now"><a href="#Conclusion-for-Now" class="headerlink" title="Conclusion for Now"></a>Conclusion for Now</h2><p>Event Modeling is changing how information systems are built. With simple repeatable patterns, information systems are as predicable as engineering efforts should be.</p>
+<h2 id="IMPORTANT"><a href="#IMPORTANT" class="headerlink" title="IMPORTANT"></a>IMPORTANT</h2><p>This content reprinted from <a target="_blank" rel="noopener" href="https://eventmodeling.org/posts/what-is-event-modeling/">Event Modeling: What is it?</a></p>
+<p>Thanks.</p>
+</div></article></div><div class="card"><div class="card-image"><a class="image is-7by3" href="/2022/04/30/2019-08-31-technical-debt/"><img class="fill" src="/images/technical-debt/cover.jpeg" alt="技术债务，到底应该怎么还？"></a></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-30T06:33:12.097Z" title="4/30/2022, 2:33:12 PM">2022-04-30</time>发表</span><span class="level-item"><time dateTime="2022-04-30T06:33:12.098Z" title="4/30/2022, 2:33:12 PM">2022-04-30</time>更新</span><span class="level-item"> Robin </span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/">技术人生</a></span><span class="level-item">24 分钟读完 (大约3665个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/30/2019-08-31-technical-debt/">技术债务，到底应该怎么还？</a></h1><div class="content"><p>几乎所有的技术团队，都会经历或多或少的技术债务，技术债务虽然是实现快速收益的一种捷径，但是为了修复哪些为了快速收益而不得不为之的技术问题，企业往往需要花费大量的金钱、人力等。那么如何有效地避免技术债务，使得开发人员更多的精力投入在有效的工作，从而产生额外价值，提高企业的产品竞争力呢？</p>
+<p>技术债务的产生有着很多的原因，但是其中更多的是由于匆忙的工作使得原来耗时较长的工作，在短时间内完成，导致部分业务逻辑没有完整的设计等，使得产品在短时间内有效，但是长远来看，却是一颗不稳定的炸弹，一旦触发，对产品、对企业都有可能造成无法挽回的损失。总而言之，技术债务会带来很多麻烦，有些甚至是“致命”的。</p>
+<blockquote>
+<p>本文以发布至：<a target="_blank" rel="noopener" href="https://weibo.com/ttarticle/p/show?id=2309404395386419675203">技术专栏丨技术债务，到底应该怎么还？</a></p>
+</blockquote>
+<h2 id="什么是技术债务？"><a href="#什么是技术债务？" class="headerlink" title="什么是技术债务？"></a>什么是技术债务？</h2><p><img src="/images/technical-debt/what-is-technical-debt.png"></p>
+<blockquote>
+<p>技术负债（英语：Technical debt），又译技术债，也称为设计负债（design debt）、代码负债（code debt），是编程及软件工程中的一个比喻。指开发人员为了加速软件开发，在应该采用最佳方案时进行了妥协，改用了短期内能加速软件开发的方案，从而在未来给自己带来的额外开发负担。这种技术上的选择，就像一笔债务一样，虽然眼前看起来可以得到好处，但必须在未来偿还。软件工程师必须付出额外的时间和精力持续修复之前的妥协所造成的问题及副作用，或是进行重构，把架构改善为最佳实现方式。 </p>
+<p>摘自 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%8A%80%E6%9C%AF%E8%B4%9F%E5%80%BA">维基百科</a></p>
+</blockquote>
+<p>很多人将技术债务类比于金融债务，但是和金融债务不同的是，技术债务可能不会承担利息。例如当需要快速验证产品的某个特点的时候，带有一定技术债务的产品可能是个好的选择，当验证之后，无需该特点的时候，可以直接移除等，此时可能不会承担债务利息。但是大多数情况下，此类情况较少，就算仅仅是为了验证产品，也不建议使用技术债务的方式去实施。类似这样方式的技术债务可称为有意的技术债务，另一种更加危险的技术债务称为无意的技术债务，无意的技术债务就像是前文说到的隐藏在代码中的炸弹。</p>
+<p>无论是那种技术债务，在未来的产品迭代过程中，都需要开发人员去界定债务边界，不能任由技术债务滋生，否则在迭代过程中，面临的困难越来越多，甚至需要被迫承担更多的技术债务。基本上，你承担的债务越多，项目的进度就越慢，项目的后续阶段就会更加困难。</p>
+<p>但是需要清楚的是，技术债务是无法消除的，你必须随时做好承担技术债务的准备。因为在一些项目场景中，一些具体问题的解决方案本身是可以解决问题的，但是该方案可能不是全局有效或最佳的，在系统的其他方面，就形成了一个不可避免而必须承担的技术债务问题。一个好的工程师团队应该是最小化技术债务影响，并对技术债务进行合理管理的团队。</p>
+<p><img src="/images/technical-debt/techdebttype.png"></p>
+<p>上文提到，技术债务分为<strong>有意的技术债务</strong>和<strong>无意的技术债务</strong>，两种形式的技术债务形成的原因和带来的结果也是不同的。在某些情况下，有意的技术债务相比无意的技术债务更好，有意的技术债务会让团队意识到问题，从而有意的去进行优化改进等，而无意的技术债务可能在项目中潜伏很长一段时间，可能导致严重的问题，然而，无意的技术债务在项目中是无法避免的，在工程师团队中可以强化编码规范、业务理解等来进行管理或者减弱技术债务出现的可能。</p>
+<p>另外还可以将技术债务分类为<strong>鲁莽型技术债务</strong>和<strong>谨慎型技术债务</strong> 。一些谨慎型的技术债务在项目的进度中是可取的，但是不论是那种技术债务，都需要每个人用于去承担，两者是共同工作的。理想的情况下，承担的债务应当是哪些有意的和谨慎的技术债务，而哪些无意的和鲁莽的技术债务应当不惜一切代价避免。</p>
+<h2 id="为什么要关心技术债务？"><a href="#为什么要关心技术债务？" class="headerlink" title="为什么要关心技术债务？"></a>为什么要关心技术债务？</h2><p><img src="/images/technical-debt/why-care-about-technical-debt.png"></p>
+<h3 id="技术债务如何影响开发"><a href="#技术债务如何影响开发" class="headerlink" title="技术债务如何影响开发"></a>技术债务如何影响开发</h3><p>在开发阶段，开发人员不可避免会遇到技术债务，开发人员应当直面技术债务，并处理技术债务问题。虽然处理技术债务可能会使得开发周期变长，但从长远来看，开发人员及时处理技术债务是有益的，一方面处理技术债务是一个技术经验积累的过程，另一方面及时的处理在之后的迭代中也减少了技术债务产生的可能等。每一个开发员都应当有意的或者尽力地避免那些无意的技术债务和鲁莽的技术债务等。</p>
+<h3 id="技术债务如何影响客户"><a href="#技术债务如何影响客户" class="headerlink" title="技术债务如何影响客户"></a>技术债务如何影响客户</h3><p>虽然乍看起来，技术债务和客户并无联系，客户也不太关心产品的代码质量等，客户只需要在成本没有增加的情况下，产品按时交付使用。然而，一个携带无意或者鲁莽的技术债务的产品在开发过程中，往往需要花费更多的时间、精力和资源，导致成本增加，但是收益却减少的情况等。</p>
+<p><img src="/images/technical-debt/techdebtcost.png"></p>
+<h3 id="技术债务如何影响用户"><a href="#技术债务如何影响用户" class="headerlink" title="技术债务如何影响用户"></a>技术债务如何影响用户</h3><p>即使是间接的，用户也会受到技术债务的影响。 他们可能不关心软件中的工作量或资金数量，但他们确实关心它的可靠运行，以及快速添加的新功能，这两者都可能受到大量技术债务的影响。 用户越快乐，客户越快乐，开发者越快乐。</p>
+<h2 id="技术债务最佳实践"><a href="#技术债务最佳实践" class="headerlink" title="技术债务最佳实践"></a>技术债务最佳实践</h2><p><img src="/images/technical-debt/technical-debt-best-practices.png"></p>
+<p>解决科技债务的最大问题是，它无法真正量化。这使得开发团队很难跟踪并让管理层向客户展示为什么要投入更多的资源和时间。</p>
+<p>但是这里有一些你可以做的事情：</p>
+<h3 id="保持最新状态"><a href="#保持最新状态" class="headerlink" title="保持最新状态"></a>保持最新状态</h3><p>不言而喻，工具，框架和库应该始终保持最新状态，可能你还未意识到这个问题所带来的影响，那只是你还没意识到而已。</p>
+<h3 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h3><p>记录需要修复或更新的所有内容是确保实际修复和更新的最重要步骤。</p>
+<p>如果存在技术债务，最好了解它并确保团队或未来的开发人员也知道。 文档减少了定位和修复任何问题所需的工作量，如果债务记录良好，甚至可能在业务层面上可见，将可能导致客户承认并提供额外资源。</p>
+<h3 id="代码评审"><a href="#代码评审" class="headerlink" title="代码评审"></a>代码评审</h3><p>另一个强大的工具是在sprint期间定期审查代码。 代码审查可以捕捉到可能导致问题的隐患，并找到解决方案。 代码评审确实需要一些时间，但在整个项目的背景下肯定是值得的。</p>
+<p>但是，代码审查也有其缺点。 开发人员往往太忙，无法深入挖掘他人的代码，因此他们只会发现明显的错误，而挑剔可能会导致团队内部紧张。 因此，它可以成为减少技术债务的有力工具，但应该谨慎应用。</p>
+<h3 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h3><p>自动化测试是一种非常强大的工具，但是经常被忽视。 自动化测试被忽略后，代码中的隐藏问题可能会无法察觉出，往往导致产品发布后需要投入不成比例的人力和时间来应对，是的成本变高甚至不可控。在开发阶段，有必要实施测试驱动开发，编写完善的测试用例，以清除代码中的许多不易察觉的问题等。</p>
+<h3 id="敏捷架构"><a href="#敏捷架构" class="headerlink" title="敏捷架构"></a>敏捷架构</h3><p>敏捷架构具有很多优点，在构建软件的过程中对更改更加开放，基本上保证在任何项目上都会发生。 但是，它确实要求代码具有灵活性和可维护性，因此敏捷方法自然会使开发人员保持良好的代码，这有助于防止大量技术债务的积累。</p>
+<h3 id="有效地复盘"><a href="#有效地复盘" class="headerlink" title="有效地复盘"></a>有效地复盘</h3><p>如果出现问题，应该用于面对，当问题解决后，需要进行有效地复盘。 但是要注意的是复盘是为了提高工作效率，绝不应该是找人责备。 复盘的重点应放在了解问题及其产生的原因上，以便团队可以采取必要措施防止同样的问题再次发生。 </p>
+<h2 id="管理技术债务的最佳做法"><a href="#管理技术债务的最佳做法" class="headerlink" title="管理技术债务的最佳做法"></a>管理技术债务的最佳做法</h2><p><img src="/images/technical-debt/manage-technical-debt.png"></p>
+<p>即使你做了以上所有事情，并尽可能避免堆积技术债务，你仍然需要处理一些问题。 这是无法避免的，因此您应该实施实践和流程以防止技术债务陷入困境。</p>
+<h3 id="高息技术债务优先"><a href="#高息技术债务优先" class="headerlink" title="高息技术债务优先"></a>高息技术债务优先</h3><p>并非所有技术债务都是平等的，因此您应该优先考虑在特定时间解决的问题以及不解决的问题。 对于经常使用和更改的代码而言，比在几乎没有使用或更改过的部分的重要性要重要得多。</p>
+<p>高息债务往往是那些在项目中起重要做的核心部分，通常围绕它进行了很多工作并以此为基础。 如果此部分的技术债务保持不变，就会妨碍所有的工作，并可能迫使更多的技术债务被添加到代码的其他部分。 因此，如果有可能，首先应优先考虑这些问题，从长远来看，使一切变得更加顺畅。</p>
+<h3 id="童子军规则"><a href="#童子军规则" class="headerlink" title="童子军规则"></a>童子军规则</h3><p>“要始终保持营地比你发现它的时候更清洁”也是适用于软件开发的：“提交的代码比检出的要更好”。鼓励团队成员，以积极减少技术债务 ; 例如，当他们发现了一块为了功能增加或错误修复的代码时激励他们重构。</p>
+<p>当然，它不能没有边界，否则它可能是一直消耗。 但是，如果你在每个sprint中留出一定比例的时间专门用于修复开发人员可能发现的任何技术债务，那么它可以在很大程度上保持产品尽可能无债务。</p>
+<p><img src="/images/technical-debt/techdebtcruft.png"></p>
+<h3 id="在履行有价值的客户工作时偿还债务"><a href="#在履行有价值的客户工作时偿还债务" class="headerlink" title="在履行有价值的客户工作时偿还债务"></a>在履行有价值的客户工作时偿还债务</h3><p>在项目的整个冲刺阶段，用于修复技术债务不是一个好主意。 一方面，客户往往不喜欢延期，对他们来说，看起来你似乎花了他们的时间和金钱来解决你做错的事情。另一方面，它也表明你已经做了大量的技术债务工作，所以你可能已经支付了更高的债务利息。</p>
+<p>你最好指定在每个冲刺中偿还技术债务所花费的时间，并用它来解决高优先级或发生过的问题。 让客户满意，并使技术债务处于可控水平。</p>
+<h3 id="忽略"><a href="#忽略" class="headerlink" title="忽略"></a>忽略</h3><p>同样重要的是要注意技术债务不应该总是得到偿还。 当产品接近其使用寿命时，如果它是短期制造的，或者它是一次性原型，技术债务不是主要问题。 这些实例很少见，但是当它们出现时你可以节省一些时间和精力。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>技术债务是伴随着项目的，无法避免，但是如何保持其在可控范围之内，是我们应该思考的问题。技术债务的避免和消除都需要好的优秀的开发人员，人始终是软件开发中最重要的因素。作为一名普通的码农，不断地提升自己是非常必要的。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://codingsans.com/blog/technical-debt">TECHNICAL DEBT: EVERYTHING YOU NEED TO KNOW, AND HOW TO MANAGE IT</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%8A%80%E6%9C%AF%E8%B4%9F%E5%80%BA">技术负债</a></li>
+<li><a target="_blank" rel="noopener" href="https://insights.thoughtworks.cn/managing-technical-debt/">技术债治理的四条原则</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.infoq.cn/article/2009/10/dissecting-technical-debt/">解析技术债务</a></li>
+</ol>
+</div></article></div><div class="card"><div class="card-image"><a class="image is-7by3" href="/2022/04/30/2019-04-17-data-mind/"><img class="fill" src="/images/data-mind/cover.jpg" alt="码农是怎么炼成的"></a></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-30T06:33:12.094Z" title="4/30/2022, 2:33:12 PM">2022-04-30</time>发表</span><span class="level-item"><time dateTime="2022-04-30T06:33:12.094Z" title="4/30/2022, 2:33:12 PM">2022-04-30</time>更新</span><span class="level-item"> Robin </span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/">技术人生</a></span><span class="level-item">22 分钟读完 (大约3353个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/30/2019-04-17-data-mind/">码农是怎么炼成的</a></h1><div class="content"><p>有人说，每个看起来与正常人无异的工程师，其实都是在学习程序开发的途中熬过、压抑过、而且创伤过的反社会人士(sociopaths)。</p>
+<p>在学习程序开发的过程中，常常看到网络上的「甘苦谈」，也听过身边前途一片光明的工程师朋友们分享过学习历程，总觉得不同的人、同样的故事却不断的重复，像是狼叫声般，从远处传来一声又一声的回响。</p>
+<p>最近读到Erik Trautman在Viking Code School部落格中的文章《Why Learning to Code is So Damn Hard》，文章里将学习写程序(Learn to Code)的过程分成了四个阶段，并解释了两个影响各阶段形成的关键因素「资料密度」以及「知识广度」，最后集合成这张图：</p>
+<p><img src="/images/data-mind/main.png"></p>
+<p>这篇文章很有趣也十分符合我所听闻的那些「工程师辛酸史」，因此决定将这四个阶段介绍给大家，希望程序初学者们在进入这条不归路之前，眼睛要放亮、计划要周详，清楚明白在前方等你们的是什么，做好完全心理准备吧!</p>
+<p>接下来我将介绍从刚开始写程序到成为一名工程师，Erik Trautman所归类必经的四个阶段：</p>
+<h2 id="想成为工程师，请做好准备迎接这段必经之路"><a href="#想成为工程师，请做好准备迎接这段必经之路" class="headerlink" title="想成为工程师，请做好准备迎接这段必经之路"></a>想成为工程师，请做好准备迎接这段必经之路</h2><p>先假设你学写程序的终极目标是要靠这行吃饭––进入相关领域工作或是自行创业，你是否做好万全准备可以从你的信心(Confidence)跟能力(Capability)散佈图中看出：</p>
+<p><img src="/images/data-mind/con_com.png"></p>
+<p>随着你具备的知识跟技能越来越多，你的自信心也会随之而增减，最后达到能力够信心足的「Job Ready」点。在Job Ready前则可以分成四个阶段：</p>
+<h3 id="第一阶段：手牵手心连心蜜月期"><a href="#第一阶段：手牵手心连心蜜月期" class="headerlink" title="第一阶段：手牵手心连心蜜月期"></a>第一阶段：手牵手心连心蜜月期</h3><p>刚开始进入程序开发界的朋友们总是怀抱着远大的梦想跟抱负，这不能怪他们，毕竟一方面，大家小时候听多了「写程序很难」、「电脑科学很硬」这种传闻，从一开始就把不少人吓去念社会科学(没有冒犯社会科学专业人士的意思);另一方面，「全民写程序」这项运动实在太成功，坊间许多工具跟学习平台让程序开发变得<br>超好理解、上手容易，像是Codecademy、Treehouse、跟Code School等线上平台，或是麻省理工的Scratch语言、Google的Blockly等程序语言工具，成功地营造了人人都能写程序而且靠这行吃饭的<br>假象形象。</p>
+<p><strong>突然间我们的问题不再是「困难度」，而是「比天高的期望」跟「比地大的梦想」。</strong></p>
+<p>最重要的是，以上提到的这些工具跟平台实在太有用，带领毫无程序开发经验的初学者们一步步认识变数、条件语句、程序语法。当你一路过关斩将把程序语言基本逻辑跟语法学会的同时，你就会超有成就感、自信心大增，开始有「原来我也行嘛」、「写程序也不过就这样」的感觉，基本上觉得自己已经跟「工程师」相差不远了。</p>
+<p><img src="/images/data-mind/con_com2.png"></p>
+<p>这个阶段将充满喜悦与成就感，在各种线上工具、网络教学的帮助下，你享受着用指尖下指令、电脑就能准确执行的主导感，你赞叹着程序语言的神奇与强大之处，从Hello World到简单回圈，每完成一道练习题你的成就感又增加几分，很多人会在这个时候认为自己已经爱上了电脑科学(而且觉得电脑科学也爱他们)，正处于能力提升，自信心也大增的「蜜月期」，这时你可能会觉得世界真美好、人生大概就会从此飞黄腾达，但我得残酷的告诉你：</p>
+<p>这段旅程才刚开始而已。</p>
+<h3 id="第二阶段：困惑之崖"><a href="#第二阶段：困惑之崖" class="headerlink" title="第二阶段：困惑之崖"></a>第二阶段：困惑之崖</h3><p><strong>就跟大部份的情侣&#x2F;新婚夫妻一样，蜜月期会结束，你会慢慢发现「相爱没这么简单」。</strong></p>
+<p>作业难度一增加(重点是程序码长度也会跟着增加)，程序错误警告就频频出现，开始不停的除错(Debug)。而且通常最大的挑战是––当错误出现时，你根本不知道错在哪里、该问什么问题。你的学习进度在这个阶段开始停滞不前，像路走到一半突然遇到悬崖而无路可走般，开始对之前的认知感到困惑，跟着信心大失。</p>
+<p><img src="/images/data-mind/con_com3.png"></p>
+<p>通常这个阶段会在你完成线上的基础教学后发生。以制作个人网站(Portfolio Website)为例好了，W3<br>School平台提供了一系列HTML、CSS、JavaScript等网页制作相关的程序教学，让初学者一单元一单元的学习语法跟功能，每单元还有例子<br>示范用法，看似好简单!全部跟着学一遍之后，你准备好动手打造自己的网站，打开文字编辑器，……，然后写没两行就卡关了。</p>
+<p>也许靠Google搜寻可以让你撑到完成网站基本架构，但当你想实现自己的创意、加上个人化的设计时，网络上的回答跟示范总是和你心里所想的不太一样，所以程序码不能全抄，然而左拼右凑出的程序码看似可行但实际上差得可远了!偏偏还不知从何debug起，可能投资了大半的时间程序码还「有减无增」，毫无进展可言。</p>
+<p>这是一个尤其挫折的必经阶段，想成为Programmer就必须经历这个关卡，勇敢跳下悬崖、逼自己展翅高飞(当然在这个阶段摔死的小雏鸟数量十分可观)。</p>
+<p>但即使你消灭了无数的bug，终于完成了几个小专桉后，你也别高兴得太早，未来的路还是非常长远而且挑战性更高!对于想进入这行吃饭的人来说，「困惑之崖」通常是你决定是否全心全意进入这一行的转捩点，而当你投资所有的时间心力在写程序上时，你将进入最让人心灰意冷的第三阶段。</p>
+<p>你可能会很好奇，到底为什么紧紧相连的第一阶段(蜜月期)跟第二阶段(困惑之崖)会差这么多?如果你也正在经历以上两个阶段，你要知道，造成阶段转换的原因跟你一点关係都没有，并不完全是因为你比别人笨或比别人不努力，而是因为「资源密度」改变的缘故。</p>
+<p><strong>因素1：资源密度Resource Density</strong></p>
+<p><img src="/images/data-mind/rd.png"></p>
+<p>在第一阶段中有提到，当零经验零基础的你开始学习写程序时，身边有着无数的资源跟工具等着你来运用。到Google搜寻打「Learn to<br>Code」你会查到超多程序学习平台、教学文、教学影片、甚至经验谈，让你感到万分的亲切及温暖，其「手牵手心连心蜜月期」的称谓当之无愧。</p>
+<p><img src="/images/data-mind/search.png"></p>
+<p>然而到了第二阶段时，这些教学资源的数量将大为骤减，任何一个刚脱离初学者的程序学习者都能够证实我此言不假。初学者一开始遇到的障碍都是「一般常见问题」，教学文、教科书里就会注明了;后期由于作业难度以及个人需求，问题才渐渐复杂起来，要从Stack<br>Overflow或是一些程序人的部落格中去找寻解题线索。一直到在你遇到的问题已经棘手到网络上根本找不太到线索的时候，你便进入了下一个阶段。</p>
+<h3 id="第三阶段：绝望沙洲"><a href="#第三阶段：绝望沙洲" class="headerlink" title="第三阶段：绝望沙洲"></a>第三阶段：绝望沙洲</h3><p>要了解进入第三阶段的关键，就要了解另一项影响着各阶段变化的重要因素：知识广度。</p>
+<p><strong>因素2：知识广度Scope of Knowledge</strong></p>
+<p><img src="/images/data-mind/sfk.png"></p>
+<p>「知识广度」也就是度过每个阶段你所必备的知识领域范围。刚开始时你需要吸收的知识很集中，不管用哪种程序语言、不管功能是什么，首先都要学会变数型态、宣告语法、回圈及条件判断式等等，这时随便请一个工程师教你都是一样的，因为「重要须知」就是这几点而已。</p>
+<p>然而学完基本功后，你所需的知识领域会一下子扩展很多，像是开始学习物件导向或是着重演算法的效率，你会需要扎实的电脑科学背景来应付，而且每一个应用都可以牵扯出更多的变化…相信我，这不是几堂MOOC课程就能救得了你的。</p>
+<p>在这个时期，万能的Google也只会丢给你更多你不懂的东西，根本查不到相关的线索!最糟的是你根本不知道你什么不知道。(You don’t know what you don’t know.)。于是<strong>「学也学不完、越学越不懂」的无力感排山倒海而来，进入最最难熬的第三阶段––「绝望沙洲」</strong>。</p>
+<p>这个阶段顾名思义像是在横越沙漠般，是一段非常长且寂寞的旅程，让你有不知何年何月才能走出来的绝望感。在一望无际的沙漠里，根本搞不清楚东西南北，资料查了半天毫无斩获，还不时被海市蜃楼(错误资讯或看似可行的解决方桉)给误导，搞得灰头土脸、头昏眼花，在这个阶段晒死、渴死、绝望死的有为青年更是不计其数。</p>
+<p><img src="/images/data-mind/con_com4.png"></p>
+<p>但只要在绝望沙洲里熬下去，接下来就会自在许多了!累积足够的经验，程序的错误就会大量减少、达到一定知识水准，就能准确判断问题的方向切入核心，工作效率因而有所增进，知识广度也会慢慢聚焦。等你拖着一身的疲惫终于走出这荒漠时，就进入了最后的阶段。</p>
+<h3 id="第四阶段：创伤后的恢复期"><a href="#第四阶段：创伤后的恢复期" class="headerlink" title="第四阶段：创伤后的恢复期"></a>第四阶段：创伤后的恢复期</h3><p>踩着千万人的尸体成功横越了沙漠，你的自信心开始回升，Google功力也可以说是神人的等级。到了这个时候，Hacker News的新闻以及超硬的MOOC课程都不成问题，你也选定了某个程序语言跟框架来专研，而且有能力制作出可以正常运作的应用程序了。</p>
+<p>但你心里深处总有着隐隐的不安，觉得程序能「用」但其实代码凌乱无章，工程师的头衔下其实是误打误撞进这行的半调子，虽然你似乎具备了一切就职条件，却总害怕面试官发现你根基薄弱的电脑知识…你正在经历「创伤后的恢复期」。</p>
+<p>在飞越困惑之崖、横越绝望沙洲之后，你应该已经学会该学的、做了该做的，成为一个名符其实的工程师，却总觉得自已资质平庸根基不稳，虽然有成功打造出一个个专案而信心回升，但老是感叹自己与心目中「专业工程师」仍有一大段差距…，这些都是「冒牌者症候群」(Impostor Syndrome)在作祟!</p>
+<p><img src="/images/data-mind/con_com5.png"></p>
+<p>在这创伤后的恢复期中，你可能会经常自我怀疑，但只要顺着这波效率提升信心也回升的潮流继续努力，在能力与自信达到一个程度时…恭喜你：</p>
+<p><strong>You Are Job Ready!<br>or<br>I learned the value of hard work by working hard.</strong></p>
+<p>原文：<a target="_blank" rel="noopener" href="http://www.ijiandao.com/2b/baijia/64041.html">http://www.ijiandao.com/2b/baijia/64041.html</a></p>
+</div></article></div><div class="card"><div class="card-image"><a class="image is-7by3" href="/2022/04/30/2019-03-18-how-to-read-books/"><img class="fill" src="/images/how-to-read/cover.jpg" alt="如何高效读懂一本书"></a></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-30T06:33:12.093Z" title="4/30/2022, 2:33:12 PM">2022-04-30</time>发表</span><span class="level-item"><time dateTime="2022-04-30T06:33:12.093Z" title="4/30/2022, 2:33:12 PM">2022-04-30</time>更新</span><span class="level-item"> Robin </span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/">技术人生</a></span><span class="level-item">11 分钟读完 (大约1713个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/30/2019-03-18-how-to-read-books/">如何高效读懂一本书</a></h1><div class="content"><p>“书中自有黄金屋，书中自有颜如玉。” 读书这件事从历史上就已经是人们获取知识，扩展视界，完成人生大转身的一个道路。但是在如今的飞速发展的互联网时代，人们已经不能够专注地去读书了，以及如今的图书出版也没有那么的繁杂和耗时了，每日都会有非常多的图书出版，面对着琳琅满目的图书，人们选择图书的范围大了，但是如何选择适合自己并且精品图书也变的苦难了。</p>
+<p>《如何高效读懂一本书》是一本帮助你建立系统化思考的框架，该工作时工作，该玩耍时玩耍，用碎片化的时间，每年可以读100本书的高效读书指南。在没有读次本书之前，大多数人总是觉得读书没时间，经常坚持不下来，没有一个有效的方法，不够专注，以及不懂得如何分享最终导致感受很糟，枯燥乏味等。而读完这本书之后，对于那些无法继续读书或者不能有效读书的事情其实都是借口。这本书从各个方面总结并且给出了能够有效并且高效读书的实践方案，让每个人都能够轻松读书且从读书中真正的汲取营养。</p>
+<h1 id="ξ·读书的若干误区"><a href="#ξ·读书的若干误区" class="headerlink" title="ξ·读书的若干误区"></a>ξ·读书的若干误区</h1><p>在没有读这本书之前，总是感觉没有定力读完某一本很喜欢的书，或者读完了一本书但却没有深刻的体会，读了就读了，没有自己的东西。当读完这本书的时候，才明白，对于读书其实有很多的误区。</p>
+<ul>
+<li>没有时间</li>
+</ul>
+<p>在如今快节奏的生活方式中，每个人都视时间为声明，快速的使用着生活中的每时每刻，每天眼睛时刻盯着手机、电脑等等，却没有能够静下心来好好的读读书。而针对这样的问题，人们总是想着不是我不想读书，是实在没有时间呀。但是请仔细想想，你是真的没有时间吗？在每日的生活中，多少事情是可以不用做的，哪些事情是在浪费时间呢？加入利用这样的时间去读读书，会怎么样呢？</p>
+<ul>
+<li>逐行阅读</li>
+</ul>
+<p>好读书的人都知道，不是每本书都需要一字一句，逐行去阅读的。但是大多数读书的人，拿到一本数之后，就一头扎了进去，也并不是这种方式不好，但是会不会有另一种读书的方式，能够更加的高效呢？其实每本书、每类书都有其自己的逻辑，我们去阅读的时候也不是每本书都用同样的方式，找到阅读某类书的好方式。</p>
+<ul>
+<li>阅读不广</li>
+</ul>
+<p>大多数人喜欢的图书基本上都是自己所擅长的，虽然读自己所擅长或者喜欢的那类图书没有错，但是久而久之，对于读者来说，可能会造成阅读面变窄，导致其他类型的信息无法获得等。在不同的成长过程中，应该有所侧重的去选择阶段所适合的图书去阅读，这样才能够在阅读的过程中，增长自己的知识和技能，提升自己的阶段性提升等。</p>
+<ul>
+<li>逢书精读</li>
+</ul>
+<p>图书种类非常之多，很多人逢书就精读，其实也并不尽然，并不是每本书都需要精读的，对于好书，例如一些经典的图书或者对自己技术能力提升有很大帮助的数，一定要精读，而且可能还需要多遍精读，才能够消化其中的知识信息等，但是对于一些兴趣点图书，我们大可不必话长时间去精读，可以略读、速读等，了解其中的主要内容即可。</p>
+<ul>
+<li>开卷有益</li>
+</ul>
+<p>很多人在读完一本书之后，总觉得收益很少。例如某本书甲用一个月的时间读完，收益是80%，乙用三个月读完，收益同样是80%，虽然甲乙都读完了书，而且收益是相同的，但是明显甲所花费的时间远远少于乙，这就是用最少的时间成本获取知识。在飞速发展的现代社会，不管是技术的革新，还是观念的提升，都可能一朝一夕，因此用最少的成本获取知识更符合当下社会的现实。</p>
+<ul>
+<li>碎片阅读</li>
+</ul>
+<p>碎片化阅读是目前可能比较火的一个词，但是个人来说，不太认同碎片化阅读能够带来的收益。碎片化阅读更加符合新闻、消息、短信息等类型的阅读，但是对于读书这件事来说，碎片化虽然能够读完书，但是可以肯定的是，每次碎片化阅读的时候，总是难以回想起之前所读内容的理解或者含义等，导致碎片化阅读的间隔时间内总是独立的，难以形成系统性的知识框架体系等。</p>
+<h1 id="ξ·读书的若干方法"><a href="#ξ·读书的若干方法" class="headerlink" title="ξ·读书的若干方法"></a>ξ·读书的若干方法</h1><p>上述读书的若干误区中，相信大多数人都有，包括本人，在很长一段时间内，都在被如何快速阅读一本书来获取收益所打扰，总是碎片化的时间里，读了那么几行几句，并没有多大的收益。在《如何高效读懂一本书》读完之后，多少看到了一些提高读书技巧的方法，希望能够在以后的读书过程中有所应用实战，提高读书效率，以最小的成本获得知识信息等。</p>
+<ul>
+<li>通读法</li>
+</ul>
+<p><img src="/images/how-to-read/tdf.png"></p>
+<ul>
+<li>树读法</li>
+</ul>
+<p><img src="/images/how-to-read/sdf.png"></p>
+<ul>
+<li>图读法</li>
+</ul>
+<p><img src="/images/how-to-read/idf.png"></p>
+<ul>
+<li>框读法</li>
+</ul>
+<p><img src="/images/how-to-read/kdf.png"></p>
+<ul>
+<li>炼读法</li>
+</ul>
+<p><img src="/images/how-to-read/ldf.png"></p>
+<ul>
+<li>逆读法</li>
+</ul>
+<p><img src="/images/how-to-read/ndf.png"></p>
+<ul>
+<li>抄读法</li>
+</ul>
+<p><img src="/images/how-to-read/cdf.png"></p>
+<ul>
+<li>仿读法</li>
+</ul>
+<p><img src="/images/how-to-read/fdf.png"></p>
+<ul>
+<li>诵读法</li>
+</ul>
+<p><img src="/images/how-to-read/ssdf.png"></p>
+</div></article></div><div class="card"><div class="card-image"><a class="image is-7by3" href="/2022/04/30/2019-03-14-soft-skills-notes/"><img class="fill" src="/images/softskills/cover.jpg" alt="软技能 --- 代码之外的生存之道"></a></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-30T06:33:12.087Z" title="4/30/2022, 2:33:12 PM">2022-04-30</time>发表</span><span class="level-item"><time dateTime="2022-04-30T06:33:12.088Z" title="4/30/2022, 2:33:12 PM">2022-04-30</time>更新</span><span class="level-item"> Robin </span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/">技术人生</a></span><span class="level-item">42 分钟读完 (大约6268个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/30/2019-03-14-soft-skills-notes/">软技能 --- 代码之外的生存之道</a></h1><div class="content"><p>本文是《软技能：代码之外的生存指南》一书的读书笔记，内容大部分都是原文的摘录，因为个人觉得原文中的一些语言更能够体现其本质，一旦泛化了，可能就不是那么的贴切了。这本书在我的书架上已经躺了很久了，与其说没有时间去读，其实也是关于技能提升的书籍几乎琳琅满目，暂时无暇顾及而已，最近一口气通读了本书，也是受益匪浅，对于以往不重视或者不在考虑范围之内的一些事情也有了一点感悟。</p>
+<h1 id="图书简介"><a href="#图书简介" class="headerlink" title="图书简介"></a>图书简介</h1><p>这是一本真正从“人”（而非技术也非管理）的角度关注软件开发人员自身发展的书。书中论述的内容既涉及生活习惯，又包括思维方式，凸显技术中“人”的因素，全面讲解软件行业从业人员所需知道的所有“软技能”。本书聚焦于软件开发人员生活的方方面面，从揭秘面试的流程到精耕细作出一份杀手级简历，从创建大受欢迎的博客到打造你，从提高自己工作效率到与如何与“拖延症”做斗争，甚至包括如何投资不动产，如何关注自己的健康。本书共分为职业篇、自我营销篇、学习篇、生产力篇、理财篇、健身篇、精神篇等七篇，概括了软件行业从业人员所需的“软技能”。通过阅读本书，软件工程人员、编程人员和其他技术人员能够积极思考自己的职业生涯，丰富自己的生活，让自己更接近成功。</p>
+<p><img src="/images/softskills/soft-skills.jpg"></p>
+<span style="padding-left: 90px;">
+    标题：《软技能：代码之外的生存指南》<br>
+    作者：John Sonmez <br>
+    译者：王小刚 <br>
+    评分：<a href="https://book.douban.com/subject/26835090/" target="_blank">8.1</a><br>
+</span>
+
+    
+
+<h2 id="第一章-职业"><a href="#第一章-职业" class="headerlink" title="第一章 职业"></a>第一章 职业</h2><p>你犯的最大的错误就是相信自己为别人工作，工作是属于公司的，但是职业生涯是属于你自己的。</p>
+<h2 id="第二章-从非同凡响开-始：绝不要做他人都在做的事"><a href="#第二章-从非同凡响开-始：绝不要做他人都在做的事" class="headerlink" title="第二章 从非同凡响开 始：绝不要做他人都在做的事"></a>第二章 从非同凡响开 始：绝不要做他人都在做的事</h2><p>开发人员最大的错误，就是没有把自己的软件开发事业当做一桩生意来看待，其实进入代码世界的时候和中世纪的木匠没啥区别，时代变了而已。大多数人为公司工作，但是我们的技能和生意都还是自己的，我们随时都能换个地方另起炉灶。</p>
+<p><strong>拥有商业心态？</strong></p>
+<p>尽管你在职业生涯的某个阶段里，你可能确实在某家公司打工，但是千万不要那个特定的角色固化了你和你的整个职业生涯。 <strong>把雇主当成你的软件开发企业的一个客户。</strong></p>
+<p><strong>如何像企业一样思考？</strong></p>
+<p>大多数企业都都需要以下几样东西： <strong>产品，服务。</strong> 一般软件开发人员卖的就是软件开发的服务（创建软件）。你需要做到：</p>
+<ul>
+<li><p>专注于你正在提供怎样的服务，以及如何营销这项服务</p>
+</li>
+<li><p>想方设法提升你的服务</p>
+</li>
+<li><p>思考你可以专注为哪一特定类型的客户或行业提供特定的服务</p>
+</li>
+<li><p>集中精力成为一位专家，专门为某一特定类型的客户提供专业整体服务（记住，作为一个软件开发人员，你只有真正专注于一类客户，才能找到非常好的工作）</p>
+</li>
+</ul>
+<p>大多数成功的公司都会开发出让客户<strong>主动上门</strong>购买的产品或服务，它们才不会一个接 一个地追逐客户。</p>
+<h2 id="第三章-思考未来，你的目标是什么"><a href="#第三章-思考未来，你的目标是什么" class="headerlink" title="第三章 思考未来，你的目标是什么"></a>第三章 思考未来，你的目标是什么</h2><p>现在你已经把你的软件开发职业当做是一个商业活动，那么，是时候着手定义你的<strong>业务目标</strong>了。</p>
+<p>如果没有确定自己的目的地，你永远都不会取得实质性的进展。一旦明确了目的地，你就会向着目标全力以赴。</p>
+<p><strong>如何设定目标？</strong></p>
+<p>起步阶段最简单的就是在心中树立一个大目标，然后再建立能帮你达成这个大目标的小目标。</p>
+<p>想一想你的职业生涯的终极目标：</p>
+<ul>
+<li><p>想成为一家公司的经理或主管？</p>
+</li>
+<li><p>想在某一天走出去开拓自己的软件开发业务？</p>
+</li>
+<li><p>想成为一名企业家创建自己的产品并将其推向市场？</p>
+</li>
+</ul>
+<p><strong>追踪你的目标？</strong></p>
+<p>你应该定期追踪并更新自己设定的目标，必要时还要调整。定期核对自己的目标。这有助于在必要时进行调整，让你对自己负责。你可能愿意在每周末为下一周设定目标之前先检查上周设定的目标。这同样适用于每月、每季和每年。</p>
+<h2 id="第四章-人际交往能力：远比你想象的重要"><a href="#第四章-人际交往能力：远比你想象的重要" class="headerlink" title="第四章 人际交往能力：远比你想象的重要"></a>第四章 人际交往能力：远比你想象的重要</h2><p><strong>别管我，我只想一个人安静的写代码？</strong></p>
+<p>我曾经对软件开发人员的工作的印象就是写代码。事实是，在软件开发领域，我们大多数时候是与人而非与计算机打交道，甚至我们所写的代码首先是供人使用的，其次才是让计算机可以理解的。</p>
+<p>如果你还是觉得自己的工作就是写写代码，那你最好要三思。作为一个软件开发人员，你的工作就是与人打交道（其实几乎所有的职业都是这样）。</p>
+<p><strong>学会如何与人打交道？</strong></p>
+<ul>
+<li><p>每个人都希望感到自己很重要</p>
+</li>
+<li><p>永远不要批评</p>
+</li>
+<li><p>换位思考</p>
+</li>
+<li><p>避免争吵</p>
+</li>
+</ul>
+<h2 id="第五章-破解面试之道"><a href="#第五章-破解面试之道" class="headerlink" title="第五章 破解面试之道"></a>第五章 破解面试之道</h2><p><strong>通过面试的最快捷的方式？</strong></p>
+<p>通过面试的最快捷的方式是让面试官<strong>对你有好感</strong>。达成该目标有很多方法，其中大多数可以在面试之前完成。</p>
+<p><strong>突破陈规，建立融洽关系？</strong></p>
+<p>大量工作岗位来自“个人推荐”。</p>
+<p>但是，如果你在申请的公司里谁都不认识，怎么办？你可以找这家公司工作的开发人员的博客，并与他们建立了联系。于是当有新工作岗位时，获得他们的推荐也就轻而易举。</p>
+<p><strong>真正的面试会怎么样的？</strong></p>
+<p>如果顺利的话，在你走进面试间的时候，面试官已经知道你是谁了，接下来要关注的事情就是自信地展现自己的能力——知道要获得这份工作需要做什么，做就是了。</p>
+<p>你还必须要证明：在技术上你确实胜任工作。</p>
+<p><strong>当下你能做什么？</strong></p>
+<ul>
+<li><p>保持技术能力，阅读技术书籍，博客文章</p>
+</li>
+<li><p>扩展自己的社交网络</p>
+</li>
+<li><p>实战，实战，实战</p>
+</li>
+</ul>
+<h2 id="第六章-就业选择：列出你的选择"><a href="#第六章-就业选择：列出你的选择" class="headerlink" title="第六章 就业选择：列出你的选择"></a>第六章 就业选择：列出你的选择</h2><p>选择1. 雇员</p>
+<p><img src="/images/softskills/select1.png"></p>
+<p>选择2. 独立咨询师</p>
+<p><img src="/images/softskills/select2.png"></p>
+<p>选择三，创业者</p>
+<p>定义：软件开发创业者使用自己的软件技能开发自己的产品、拓展自己的业务。</p>
+<p><img src="/images/softskills/select3.png"></p>
+<p><strong>到底选择哪一个？</strong></p>
+<p>职业生涯的起步阶段“雇员”是一个明智的选择，选择什么完全取决于你自己，你也可以随时切换路径。</p>
+<h2 id="第七章-你是哪类软件开发人员"><a href="#第七章-你是哪类软件开发人员" class="headerlink" title="第七章 你是哪类软件开发人员"></a>第七章 你是哪类软件开发人员</h2><p><strong>专业化是非常重要</strong></p>
+<p>身为“专才”后，潜在雇主和客户群都变小了，但是实际上你对他们更具吸引力了。只要你专业能够雄厚，市场没有过渡饱和，与那些自称为“软件开发人员”的人相比，你能更轻松地找到工作或者赢得客户。</p>
+<p><strong>在一个专业方向上拥有专长</strong></p>
+<blockquote>
+<p>注意：专业化的规则是：专业化程度越深，潜在的机会就越少，但获得这些机会的可能性越大。</p>
+</blockquote>
+<p><strong>开发人员的专业类型</strong></p>
+<ul>
+<li><p>Web开发</p>
+</li>
+<li><p>嵌入式系统</p>
+</li>
+<li><p>特定的操作系统</p>
+</li>
+<li><p>移动开发</p>
+</li>
+<li><p>框架</p>
+</li>
+<li><p>软件系统</p>
+</li>
+</ul>
+<p><strong>选择你的专业？</strong></p>
+<ul>
+<li><p>在你现在或以前的公司里，有哪些主要的痛点？你能成为一名专门解决这些疼点的专家吗？</p>
+</li>
+<li><p>有没有一种特定的工作是无人能做，或者缺乏经验丰富的人？成为这个领域的专家，你会得到大量的业务</p>
+</li>
+<li><p>在各种会议上或者用户组中那些话题最长出现？</p>
+</li>
+<li><p>哪类问题你回复的最多，无论是同事还是答问上？</p>
+</li>
+</ul>
+<p><strong>精通多种语言的程序员该怎么办？</strong></p>
+<p>团队里有一个全能的开发人员是件好事，但是<strong>很少</strong>有公司或客户会去寻找这样的人才。</p>
+<h2 id="第八章-公司与公司是不一样的"><a href="#第八章-公司与公司是不一样的" class="headerlink" title="第八章 公司与公司是不一样的"></a>第八章 公司与公司是不一样的</h2><p>在接收一份工作之前考虑是很重要，从薪资和福利的角度评价一个潜在的工作机会很容易的，但是长期发展和工作环境的角度评价可能对你更为重要。</p>
+<p>公司分类：</p>
+<ul>
+<li><p><strong>小公司或创业公司</strong>：职责多，工作内容不稳定，自己工作成就对公司影响很大（好，坏），第一批员工可能得到更大的回报（股票，提升等）</p>
+</li>
+<li><p><strong>中等公司</strong>：角色很明确，你也会很稳定。缓慢而稳健的做事风格通常能占的先机，大多数中等公司讨厌风险。</p>
+</li>
+<li><p><strong>大公司</strong>：大量的规范和流程，成长机会，培训机会，提供各种软件产品使用，技术创新，你可能负责很少的一部分代码或者模块，办公室政治</p>
+</li>
+</ul>
+<blockquote>
+<p>注意：我不建议为了“中彩票”而选择去创业公司。如你喜欢快速节奏，兴奋的工作环境，也希望构建伟大的产品并见证它的成长，那你可以试试。</p>
+</blockquote>
+<p><strong>软件开发公司&amp;&amp;非软件开发公司</strong></p>
+<p><code>建议</code>：我们尽量选择软件开发公司，可以得到尊重，发展空间，最近技术。</p>
+<h2 id="第九章-攀登普升阶段"><a href="#第九章-攀登普升阶段" class="headerlink" title="第九章 攀登普升阶段"></a>第九章 攀登普升阶段</h2><p><strong>承担责任</strong></p>
+<p>在任何公司里能让你脱颖而出的最重要法宝就是承担更多的责任。金钱总是跟随着责任。有任何机会去承担更多责任时，承担起来！</p>
+<p><strong>如何能让自己承担更多的责任？</strong></p>
+<ul>
+<li><p>有一个不受重视的项目，你能去负责它吗？</p>
+</li>
+<li><p>你能帮助团队里的新人快速成长吗？</p>
+</li>
+<li><p>你能负责文档制作流程，并保证及时更新这些文档吗？</p>
+</li>
+<li><p>那些工作是没有人愿意去做，你愿意承担起来，并将其简化或者自动化吗？</p>
+</li>
+</ul>
+<p><strong>引入注目</strong></p>
+<ul>
+<li><p>每天都记录自己的活动日志–把这个日志以及周报的形式发送给领导。</p>
+</li>
+<li><p>提供演讲或培训–选择一个对你的团队有用的话题</p>
+</li>
+<li><p>发表意见–只要在会议上就这么做，或者只要你能得到的机会就这么做。</p>
+</li>
+<li><p>保证”曝光度“–定期与老板会面，确保你经常被注意到。</p>
+</li>
+</ul>
+<p><strong>自学</strong></p>
+<ul>
+<li><p>不断的学习，这样你的价值不断的提升。如考证书等</p>
+</li>
+<li><p>不要只学软件开发，你还得学领导力，管理和商科的有关知识。</p>
+</li>
+<li><p>分享自己学到的东西。</p>
+</li>
+</ul>
+<p><strong>成为问题的解决着</strong></p>
+<p>要成为那个永远能为各种问题找到解决方案的人。要成为勇敢执行这些解决方案以获得成果的人。</p>
+<p>如果你解决”别人无法解决或不愿意解决的问题“，无论你在哪一家公司都会得到重视。</p>
+<p><code>如果如果</code>:没有这样的机会咋办？答案：辞职换工作。</p>
+<p><strong>关于办公室政治</strong></p>
+<p>应该对所在的组织的政治气候保持警觉。尽管不能完全避开，但至少应该知道会发生什么，那些人需要避开，那些人永远不要交集。</p>
+<h2 id="第十章-成为专业人士"><a href="#第十章-成为专业人士" class="headerlink" title="第十章 成为专业人士"></a>第十章 成为专业人士</h2><p>成为专业人士是一种心态。</p>
+<p>成为专业人士的全部在于：引入注目，恪尽职守，以及不屈服于挫折。需要你克服自身的缺点，静下来创作出尽可能最好的作品。专业将是你最大的财富，学会像专业人士那样做事和思考。</p>
+<p><strong>什么是专业人士?</strong></p>
+<p>专业人士会严肃的对待自己的责任和事业，愿意做出艰难的选择去做自己认为是正确的事情–往往还要自己承担责任。</p>
+<p><img src="/images/softskills/select4.png"></p>
+<p><strong>成为专业人士（养成良好习惯）</strong></p>
+<p>一切都开始习惯，改变人生，从习惯开始。想成为专业人士，你需要养成自己的专业习惯。</p>
+<p>时间管理：专业人士的强大的习惯。</p>
+<p><strong>坚守正道</strong></p>
+<p>技术和道德两方面的挑战。你必须两种情况下做出正确的选择。</p>
+<p>专业人士有着不可逾越的底线。</p>
+<p>专业人士必须工作的优先级做出艰难的选择。专业人士会评估需要完成的工作，判定优先级后再</p>
+<p>开始工作，并学会“不”。</p>
+<blockquote>
+<p>如果如果：如果不能说“不”时，就同意吧，然后赚点钱离开找下一家公司吧。</p>
+</blockquote>
+<p><strong>追求品质，完善自我</strong></p>
+<p>专业人士–必须不断的改善和提高自己的工作品质。不要随便降低标准。。</p>
+<p>不断的努力，学习来培养，维持自己的专业能力。改善自己的弱点，并极大的发挥自己的优点。最好了解自身的强项是什么并且充分发挥自己的优势。</p>
+<h2 id="第十一章-懂得自由：如何辞职"><a href="#第十一章-懂得自由：如何辞职" class="headerlink" title="第十一章 懂得自由：如何辞职"></a>第十一章 懂得自由：如何辞职</h2><p><strong>明智的处理方式</strong></p>
+<p>辞职–希望你银行有些储存。因为一旦辞职了，只能靠自己了。就几个月的储存，缺乏坚实的情况下辞职是一种冒险行为。</p>
+<p>明智的方式：开始做自己的副业务，并让他足够成功，这样薪水大幅度减少，也可以完成自己的转型。在考虑辞掉工作之前，你需要有一个切实可行的计划，推荐业余时间启动你想创建的业务，等这个业务产生足够维持生存的收入时，你再转为全职。</p>
+<blockquote>
+<p>如果如果：已经辞职了，但是没有储存，怎么办？</p>
+</blockquote>
+<p>答案：努力工作，养成高效的习惯，给自己最好的成功机会。节省资源，有线电视等费用都砍掉。同时想想自己还能维持多久？自己能做些什么来维持更久。</p>
+<p><strong>准备好为自己工作</strong></p>
+<p>为自己工作比想象中难得多。正式辞职前的副业务非常重要，副业务为自己当老板做好准备。</p>
+<p><strong>你真正工作的时间到底有多长</strong></p>
+<p>为别人打工时，我么每天努力的工作时间不到一半（4个小时左右）。</p>
+<p>辞职工作之前，你对自己实际承担的工作量有一个符合实际的预期。并训练自己提前处理更高强度的工作负荷。</p>
+<p><strong>切断脐带</strong></p>
+<p>缩小开销，节约。</p>
+<p>计划好，打算那一天离职，在日历上做好标记。并做好准备，准备好了就可以提出辞职</p>
+<blockquote>
+<p>提醒：辞职必须注意劳动合同，不同的公司对辞职的要求不一样。”业余时间开发的软件是否属于公司“这个必须要注意。</p>
+</blockquote>
+<h2 id="第十二章-成为自由职业者：开启自己的一片天地"><a href="#第十二章-成为自由职业者：开启自己的一片天地" class="headerlink" title="第十二章 成为自由职业者：开启自己的一片天地"></a>第十二章 成为自由职业者：开启自己的一片天地</h2><p>开启自己的一片天地开始自己的业务可以通过成为自由职业者或独立咨询师来实现。</p>
+<p><strong>开始</strong></p>
+<p>推荐，在全职从事新业务之前先做一段时间的兼职副业。随着时间流逝不断增强业务能力。</p>
+<p><strong>问问你认识的人</strong></p>
+<p>如何开始？问问你认识的人，发下邮件，社交等方式，毕竟刚开始时相信你的就是认识你的那些人</p>
+<p><strong>获得客户的最佳路径</strong></p>
+<p><img src="/images/softskills/path.png"></p>
+<p><strong>怎么收费</strong></p>
+<p>自由工作收费 &#x3D;（平时工作 ×２倍）</p>
+<p>说服客户：给客户带来的价值高，值这个价钱。</p>
+<h2 id="第十三章-创建你的第一个产品"><a href="#第十三章-创建你的第一个产品" class="headerlink" title="第十三章 创建你的第一个产品"></a>第十三章 创建你的第一个产品</h2><p>软件开发人员能开发软件，还能开发博客，视频，书等信息产品。</p>
+<p><strong>找到受众</strong></p>
+<p>没有解决问题的产品毫无意义，所以不要找到客户前创建产品。否则你只是冒险为一个不存在的问题创造了一个解决方案。</p>
+<p>你想开发出一款产品，第一步应该是筛选出一组特定的受众，他们也是你的解决方案的目标用户。</p>
+<p>如果你想让自己的产品也同样成功（虽然也许在规模上达不到），<strong>首先打造一个成功的博客，使用播客、演讲、视频和其他媒体来发展自己的受众。</strong></p>
+<p><strong>测试市场</strong></p>
+<p>发个准备要做的产品列表发给受众（预付费折扣等来吸引），用户数达到想要的数目就开始做，不然就退款，道歉。。。</p>
+<p><strong>从小处着手</strong></p>
+<p>从小出着手，你不可能第一次就开发出一个完美，强大的，而且市场特别好的产品。</p>
+<p>如果你想尽可能缩短自己的学习曲线，你就需要尽量缩短开始行动到看到成果之间的周期。</p>
+<p><strong>如何开始，行动？</strong></p>
+<p>尝试，你必须去做自己认为正确的，失败了时找出为什么它不管用，然后再去尝试不同的东西。大多数创造出成功产品的创业者也是这样做的。</p>
+<h2 id="第十四章-你打算开始创业吗"><a href="#第十四章-你打算开始创业吗" class="headerlink" title="第十四章 你打算开始创业吗"></a>第十四章 你打算开始创业吗</h2><p>如果你已经有一个好点子，有了让自己坚持到底的激情和干劲，你会发现冒着风险白手起家还是值得的。</p>
+<p><strong>创业的基础</strong></p>
+<p>创业公司：投资性创业公司，自力更生创业公司</p>
+<p><strong>不做大，就回家</strong></p>
+<p>公司到达一定规模时，被收购或者上市。创业失败，可能两手空空回家。</p>
+<p><strong>创业典型的周期</strong></p>
+<p>单独创始人，还是合作，一般投资性至少一个合作人。</p>
+<p><strong>创业加速器</strong></p>
+<p>加入加速器计划，得到资金，短时间内快速发展，当然风险也很大。</p>
+<p><strong>获得投资</strong></p>
+<p>第一笔资金：种子资金，VC投资：A轮投资，最后上市，或者被收购来获得最大的回报。</p>
+<blockquote>
+<p>注意：股权时公司的命脉，必须考虑清楚，不然以后公司上市后，得到回报的人是别人。那样两手有空空了。</p>
+</blockquote>
+<h2 id="第十五章-远程工作的生存策略"><a href="#第十五章-远程工作的生存策略" class="headerlink" title="第十五章 远程工作的生存策略"></a>第十五章 远程工作的生存策略</h2><p><strong>做“隐士”面临的条件</strong></p>
+<ol>
+<li><strong>时间管理</strong></li>
+</ol>
+<p>我们面临的最明显挑战就是时间管理。在家办公遇到各种各样的干扰。</p>
+<p>需要计划－－坚持时间管理来执行计划。日程表越有规律、越是规划得当越好。</p>
+<ol start="2">
+<li><strong>自我激励</strong></li>
+</ol>
+<p>无法做到自律和自控，那就重新考虑是否在家办公了。</p>
+<p>日程表和常规是非常重要的依靠。当激情不再时，习惯就帮上你。</p>
+<p>推荐：最下来１５分钟集中注意力工作，然后就自然的继续下去了（设置闹钟）</p>
+<ol start="3">
+<li><strong>孤独感</strong></li>
+</ol>
+<p>长时间一个人工作，容易产生孤独感，需要出去走走，参加会议，健身等。</p>
+<blockquote>
+<p>如果如果：找不到远程工作咋办？</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>试试目前的工作是否远程做。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>找找远程的工作。</li>
+</ul>
+</blockquote>
+<h2 id="第十六章-假装自己能成功"><a href="#第十六章-假装自己能成功" class="headerlink" title="第十六章 假装自己能成功"></a>第十六章 假装自己能成功</h2><p>有些人面对困难的时候挑战，因为他么有共同点“<strong>假装自己能成功</strong>”。</p>
+<p><strong>“假装自己能成功”的真正含义</strong></p>
+<p>暗示自己”我能成功“，</p>
+<ul>
+<li><p>你仿佛已经具备了成功完成任务的技能和天分。</p>
+</li>
+<li><p>你仿佛已经成为自己想成为的那类人。</p>
+</li>
+<li><p>你仿佛战斗已经结束，而你大获全胜，因为你深知如果自己坚持不赖，胜利就是眼前。</p>
+</li>
+<li><p>你仿佛已经对即将踏上的未知道路驾轻就熟。</p>
+</li>
+</ul>
+<p>“假装自己能成功”就是这样起作用的。你说服自己的身体和内心去努力，使梦想成为现实</p>
+<p><strong>付诸实践</strong></p>
+<p>如果你假装能成功，那你必须有勇气。</p>
+<p>使用场合：面试，不要假装懂，你要证明”你以前克服过这类困难“的心态，姿势。证明”你可以“。</p>
+<h2 id="第十七章-单调乏味的简历——如何修改"><a href="#第十七章-单调乏味的简历——如何修改" class="headerlink" title="第十七章 单调乏味的简历——如何修改"></a>第十七章 单调乏味的简历——如何修改</h2><p>如你的简历和大多数开发人员的简历差不多，那就你得花一点工夫。</p>
+<p><strong>你不是专业的“简历写手”</strong></p>
+<p>“你的CEO不会写软件”，就这样思考，那你为什么花点钱找一个写手帮你写呢。</p>
+<p><strong>雇一个简历写手</strong></p>
+<p>雇个写手（你一定要确保准备好了发所需要的所有信息，记住：进来的垃圾，出来的也是垃圾）：</p>
+<ul>
+<li><p>熟悉行业</p>
+</li>
+<li><p>可以给你展示简历样本</p>
+</li>
+</ul>
+<p><strong>比别人多做一点</strong></p>
+<p>对软件开发人员来说，简历不一定要花哨好看，但一份专业的简历非常重要。</p>
+<p><strong>不想雇专业的简历写手该怎么办</strong></p>
+<ul>
+<li><p>把简历放到网上</p>
+</li>
+<li><p>简历有创意</p>
+</li>
+<li><p>使用“行动–结果”的描述</p>
+</li>
+<li><p>校对</p>
+</li>
+</ul>
+<h2 id="第十八章-请勿陷入对技术的狂热之中"><a href="#第十八章-请勿陷入对技术的狂热之中" class="headerlink" title="第十八章 请勿陷入对技术的狂热之中"></a>第十八章 请勿陷入对技术的狂热之中</h2><p>如果你能让自己不成为某种技术的信徒，你会在职业生涯之路上走的更远。</p>
+<p><strong>我们都是技术的信徒</strong></p>
+<p>我们大多数人崇拜某种技术，因为我们熟悉这种技术。很自然的会相信自己选择是最好的。我们不可能充分了解现存的所有技术， 没必要选择最好的而贬低其他的。</p>
+<p><strong>天生一物必有用</strong></p>
+<p>在少在历史的某个时间点，每项技术都被看作是那个时代里“好的”甚至“伟大的”。</p>
+<p><strong>发生在我身上的转变</strong></p>
+<p>世界上没有最好的语言，就是特定的问题，需求，环境来选择某一种语言。</p>
+<p><strong>不拘一格</strong></p>
+<p>没有理由去强烈坚持自己的技术就是最好的，而轻视甚至无视其他技术。如你保持开放的心态，你可能得到更多的机会。</p>
+</div></article></div><div class="card"><div class="card-image"><a class="image is-7by3" href="/2022/04/30/2019-11-06-solid-principles-for-becoming-a-better-ios-developer/"><img class="fill" src="/images/solid/cover.jpg" alt="如何成为更好的iOS开发工程师之S.O.L.I.D原则"></a></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-30T06:33:12.083Z" title="4/30/2022, 2:33:12 PM">2022-04-30</time>发表</span><span class="level-item"><time dateTime="2022-04-30T06:33:12.084Z" title="4/30/2022, 2:33:12 PM">2022-04-30</time>更新</span><span class="level-item"> Robin </span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/">技术人生</a></span><span class="level-item">27 分钟读完 (大约4045个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/30/2019-11-06-solid-principles-for-becoming-a-better-ios-developer/">如何成为更好的iOS开发工程师之S.O.L.I.D原则</a></h1><div class="content"><p>在互联网时代，<strong>S.O.L.I.D</strong>原则可谓影响力久远，在计算机程序设计语言以及各个平台特性中都有S.O.L.I.D的身影，S.O.L.I.D原则也指导着软件工程的设计与编码工程。iOS平台的软件开发亦是软件开发领域的一支，S.O.L.I.D原则也同样对iOS软件开发有效，并且做称为一个更好的iOS软件开发人员，对S.O.L.I.D原则或许要理解更加深刻，并付诸实践。</p>
+<p><strong>S.O.L.I.D</strong>原则本质上是五个面向对象编程（OOP）的指导性原则。当在进行类或者模块的设计和编码时，遵循S.O.L.I.D原则可以让软件更加的健壮和稳定。</p>
+<ul>
+<li><strong>S</strong>ingle Responsibility Principle（单一职责原则，SRP）</li>
+<li><strong>O</strong>pen&#x2F;closed Principle（开放封闭原则，OCP）</li>
+<li><strong>L</strong>iskov Substitution Principle（里氏替换原则，LSP）</li>
+<li><strong>I</strong>nterface Segregation Principle（接口隔离原则，ISP）</li>
+<li><strong>D</strong>ependency Inversion Principle（依赖倒置原则，DIP）</li>
+</ul>
+<h2 id="单一职责原则（SRP）"><a href="#单一职责原则（SRP）" class="headerlink" title="单一职责原则（SRP）"></a>单一职责原则（SRP）</h2><p><strong>单一职责原则（SRP）</strong>指的是一个类或者模块有且只有一个职责。一个类就像一个容器，它能添加任意数量的属性、方法等。但是，如果视图让一个类实现太多功能，很快这个类就开始变得臃肿笨重。任意小的一个改动都可能导致这个类发生变化，重复的全量测试等等。但是如果遵循SRP，类将保持简洁且灵活的状态，每个类将只负责单一的一个问题、任务或者关注点，这样的方式对于开发测试来说，代价最小。<strong>SRP的核心就是把整个问题拆分成小模块，并且每个小模块都将通过一个单独的类进行实现、负责。</strong></p>
+<p>通常在开发阶段，因为SRP原则的简单，我们很容易违背SRP原则。<strong>最大的现象是小功能或者小特性。</strong>那些小特性往往让开发慢慢陷入困境，特别是在团队作战中，你为一个类添加了一个小特性，另一个人添加了另一个小特性，慢慢的该类的功能开始变得繁多，而到最后，如何使用该类以及优化和重构该类成了最大的纠结。</p>
+<p>相对来说，iOS开发人员可能是最容易违背SRP原则的，因为iOS体系的特殊性，<strong>UIViewController</strong>是我们无法避开的。</p>
+<p>简单点说，<strong>UIViewController</strong>是将屏幕上的各个视图组合在一起，例如表格视图、图片视图等等，另外<strong>UIViewController</strong>还承担着<strong>UIViewController</strong>之间的导航作用，有时，还可能承担网络请求等等。不完全统计<strong>UIViewController</strong>共有12中职责，这可能是严重违背SRP原则的一个iOS组件，因此在进行iOS软件开发的时候，人们都称App中的<strong>UIViewControllers</strong>为<strong>Massive View Controller</strong>，即大规模视图控制器。</p>
+<p>这也是为什么几乎每个iOS开发者都不愿意随意的改变ViewController的地方，由于其承担的责任较多、小特性很多，一个不完整或者考虑不周全的改动，可能导致应用程序无法正常运行或者运行不符合预期等。</p>
+<h3 id="如何应对呢？"><a href="#如何应对呢？" class="headerlink" title="如何应对呢？"></a>如何应对呢？</h3><p>首先，坚决不为了单一的快而在原有的类上添加小功能、小特性，转而思考模块、组件或者API的方式。在开发过程中，需要我们摆脱掉修修补补的思想或者黑客的思维，为了软件的生命完整性和可扩展性，考虑类库形式的解决方案等。构建尽量小的类，只完成一个任务或者只解决一个问题。如果面对的问题是个相对大的问题，试着分解问题成多个小问题，然后为每个小问题编写对应的解决方案类，最终构建一个类来组装各个小类，解决大的问题。</p>
+<p>重新审视项目中的ViewController，如果该类过于沉重，试着分解该类中不同功能，让ViewController变的轻量。一个很好的例子是iOS SDK提供的UITableView的组装方式，使用delegate和dataSource分离动作和数据源，让TableView的实现条理分明，简洁快速。<strong>使用Data Source的方式组织数据，是任何类都可以施行的方式，不仅仅只针对ViewController。</strong></p>
+<h2 id="开放封闭原则（OCP）"><a href="#开放封闭原则（OCP）" class="headerlink" title="开放封闭原则（OCP）"></a>开放封闭原则（OCP）</h2><p><strong>开放封闭原则（OCP）</strong>指出，一个类应该对扩展开放，对修改关闭。这意味一旦你创建了一个类并且应用程序的其他部分开始使用它，你不应该修改它。为什么呢？因为如果你改变它，很可能你的改变会引发系统的崩溃。如果你需要一些额外功能，你应该扩展这个类而不是修改它。使用这种方式，现有系统不会看到任何新变化的影响。同时，你只需要测试新创建的类。</p>
+<p>假设我们有一个获取用户数据的类<code>UserFetcher</code>，在该类中有一个方法<code>fetchUsers</code>，如下：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UserFetcher</span> &#123;</span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">fetchUsers</span>(<span class="params">onComplete</span>: <span class="keyword">@escaping</span> ([<span class="type">User</span>]) -&gt; <span class="type">Void</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> session <span class="operator">=</span> <span class="type">URLSession</span>.shared</span><br><span class="line">        <span class="keyword">let</span> url <span class="operator">=</span> <span class="type">URL</span>(string: <span class="string">&quot;&quot;</span>)<span class="operator">!</span></span><br><span class="line">        session.dataTask(with: url) &#123; (data, <span class="keyword">_</span>, error) <span class="keyword">in</span></span><br><span class="line">            <span class="keyword">guard</span> <span class="keyword">let</span> data <span class="operator">=</span> data <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">print</span>(error<span class="operator">!</span>)</span><br><span class="line">                onComplete([])</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">let</span> decoder <span class="operator">=</span> <span class="type">JSONDecoder</span>()</span><br><span class="line">            <span class="keyword">let</span> decoded <span class="operator">=</span> <span class="keyword">try?</span> decoder.decode([<span class="type">User</span>].<span class="keyword">self</span>, from: data)</span><br><span class="line">            onComplete(decoded <span class="operator">??</span> [])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该方法乍一看很好的实现了从网络加载数据，进行解析并返回解析后的数据。但是，假设有另一个任务需要从网络加载<code>Article</code>的数据，如果依照上述写法，需要重新构建一个类，用来加载<code>Article</code>数据，看似无误，但是问题在于，加载<code>User</code>的方法和加载<code>Article</code>的方法99%都是相同的，如果要如此重复的写下去，那么代码量将翻倍重复。另一个严重的问题在于，如果加载协议发生了改变，每一个加载数据的类都需要修改，很有可能演变成异常灾难。那么比较好的写法是什么呢？</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Fetcher</span>&lt;<span class="title class_">T</span>: <span class="title class_">Decodable</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">fetch</span>(<span class="params">onComplete</span>: <span class="keyword">@escaping</span> ([<span class="type">T</span>]) -&gt; <span class="type">Void</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> session <span class="operator">=</span> <span class="type">URLSession</span>.shared</span><br><span class="line">        <span class="keyword">let</span> url <span class="operator">=</span> <span class="type">URL</span>(string: <span class="string">&quot;&quot;</span>)<span class="operator">!</span></span><br><span class="line">        session.dataTask(with: url) &#123; (data, <span class="keyword">_</span>, error) <span class="keyword">in</span></span><br><span class="line">            <span class="keyword">guard</span> <span class="keyword">let</span> data <span class="operator">=</span> data <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">print</span>(error<span class="operator">!</span>)</span><br><span class="line">                onComplete([])</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">let</span> decoder <span class="operator">=</span> <span class="type">JSONDecoder</span>()</span><br><span class="line">            <span class="keyword">let</span> decoded <span class="operator">=</span> <span class="keyword">try?</span> decoder.decode([<span class="type">T</span>].<span class="keyword">self</span>, from: data)</span><br><span class="line">            onComplete(decoded <span class="operator">??</span> [])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>针对数据加载类进行了重构，定义了一个支持任何<code>Decodable</code>协议的类<code>Fetcher</code>，也就是定义了一个支持泛型的类，改造后的类能够支持所有相同的返回值的数据接在与解析等。例如：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typealias</span> <span class="type">UserFetcher</span> <span class="operator">=</span> <span class="type">Fetcher</span>&lt;<span class="type">User</span>&gt;</span><br><span class="line"><span class="keyword">typealias</span> <span class="type">ArticleFetcher</span> <span class="operator">=</span> <span class="type">Fetcher</span>&lt;<span class="type">Article</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>开放封闭原则（OCP）</strong>的良好遵循，能够很好的拯救开发人员的时间，也能够让整个项目快速演进。上述例子可能不足以完整的说明开放封闭原则的重要性，但是在不断地思考和实践的过程中，还是建议有意的将开放封闭原则带入到软件开发的过程中，会有意想不到的好效果。</p>
+<h2 id="里氏替换原则（LSP）"><a href="#里氏替换原则（LSP）" class="headerlink" title="里氏替换原则（LSP）"></a>里氏替换原则（LSP）</h2><p><strong>里氏替换原则（LSP）</strong>指的是，派生的子类应该是可替换基类的，也就是说任何基类出现的地方，子类一定可以出现。值得注意的是，当你通过继承实现多态行为时，如果派生类没有遵循LSP，可能会使系统出现异常。所有要谨慎使用继承，只有确定是<strong>is-a</strong>关系时才使用继承。另外，LSP表示任何与类一起使用的方法函数也应该与这些类的任何子类一起使用，如果重写方法，该方法的使用者应该看不到基类对应的方法与子类所重写的方法之间的区别。</p>
+<p>例如上述例子中，<code>ArticleFetcher</code>是从网络加载数据，进行解析和返回结果的，但是某个时刻，<code>Article</code>数据可能并不需要从网络进行加载，而是从本地文件系统进行加载，此时良好的解决方案就是重写<code>fetch</code>方法，例如：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">FileFetcher</span>&lt;<span class="title class_">T</span>: <span class="title class_">Decodable</span>&gt;: <span class="title class_">Fetcher</span>&lt;<span class="title class_">T</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">func</span> <span class="title function_">fetch</span>(<span class="params">onComplete</span>: <span class="keyword">@escaping</span> ([<span class="type">T</span>]) -&gt; <span class="type">Void</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> json <span class="operator">=</span> <span class="keyword">try?</span> <span class="type">String</span>(contentsOfFile: <span class="string">&quot;article.json&quot;</span>)</span><br><span class="line">        <span class="keyword">guard</span> <span class="keyword">let</span> data <span class="operator">=</span> json<span class="operator">?</span>.data(using: .utf8) <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">let</span> decoder <span class="operator">=</span> <span class="type">JSONDecoder</span>()</span><br><span class="line">        <span class="keyword">let</span> decoded <span class="operator">=</span> <span class="keyword">try?</span> decoder.decode([<span class="type">T</span>].<span class="keyword">self</span>, from: data)</span><br><span class="line">        onComplete(decoded <span class="operator">??</span> [])</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>快速的方法重写后，好像都对，但是这里犯了一个严重的错误。基类的工作方式是，如果发生了错误，会返回一个空的数组，完成程序处理，然而重写后的方法如果发生了错误，则什么都不发生。这样对于使用该方法的UI界面则不会更新，也不会有提示等。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方式1</span></span><br><span class="line"><span class="keyword">let</span> fetcher <span class="operator">=</span> <span class="type">FileFetcher</span>&lt;<span class="type">Article</span>&gt;()</span><br><span class="line">fetcher.fetch &#123; articles <span class="keyword">in</span></span><br><span class="line">    <span class="keyword">self</span>.articles <span class="operator">=</span> articles</span><br><span class="line">    <span class="keyword">self</span>.tableView.reloadData()</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 方式2</span></span><br><span class="line"><span class="keyword">if</span> fetcher <span class="keyword">is</span> <span class="type">FileFetcher</span> &#123;</span><br><span class="line">    tableView.reloadData()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其实这两种方式都是<strong>不对或不严谨</strong>的。无论是上述哪一种方式，最终的目的都是不改变基类的基础上，让子类完整的实现和基类相同的行为，达到目标一致的结果。方式1看似没有问题，但是子类的行为在实现的时候忽略了发生错误时的程序行为，方式2 可以算作是一种偷懒的方式，虽然<code>fetcher</code>对象的确是<code>FileFetcher</code>，但是这样的方式完全丢弃了构建子类的目的，也失去了子类化的意义，就像使用代理回调和Block回调一样。</p>
+<h2 id="接口隔离原则（ISP）"><a href="#接口隔离原则（ISP）" class="headerlink" title="接口隔离原则（ISP）"></a>接口隔离原则（ISP）</h2><p><strong>接口隔离原则（ISP）</strong>表明类不应该被迫依赖他们不使用的方法，也就是说一个接口应该拥有尽可能少的行为，接口的实现应该精简且功能单一。假设上述关于<code>Article</code>的数据获取之后，在列表中展示后，我们还需要获取用户点击列表项之后，展示详情。作为一个面向协议的程序员，这里可以使用协议的方式解决该问题。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protocol</span> <span class="title class_">ArticleFetcher</span> &#123;</span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">getArticles</span>(<span class="params">onComplete</span>: ([<span class="type">Article</span>]) -&gt; <span class="type">Void</span>)</span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">getArticle</span>(<span class="params">id</span>: <span class="type">String</span>, <span class="keyword">_</span>: ([<span class="type">Article</span>]) -&gt; <span class="type">Void</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此时构建一个获取详情的类，并实现<code>ArticleFetcher</code>协议。虽然这样可以解决上述问题，但是带来的问题是，在列表页，并不需要<code>getArticle</code>，在详情页不需要<code>getArticles</code>。上述协议方法的定义方式，提供了不需要的方法，直接增加了混乱和噪声，这也违背了<strong>单一职责原则（SRP）</strong>中讨论的所有问题。</p>
+<p>为了解决此问题，可以分解上述协议为两个，提供职责单一，不耦合的协议定义方式，例如：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protocol</span> <span class="title class_">ArticlesFetcher</span> &#123;</span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">getArticles</span>(<span class="params">onComplete</span>: ([<span class="type">Article</span>]) -&gt; <span class="type">Void</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">protocol</span> <span class="title class_">ArticlesFetcher</span> &#123;</span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">getArticle</span>(<span class="params">id</span>: <span class="type">String</span>, <span class="keyword">_</span>: ([<span class="type">Article</span>]) -&gt; <span class="type">Void</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>分开定义后，之前的实现并不需要再次修改，同一个类可以同时实现这两个协议。在列表控制器里，使用<code>ArticlesFetcher</code>的实例，而不会造成额外的混乱，这样，不仅可以在获取详情的勒种添加功能，还不会为类的用户带来使用麻烦。</p>
+<p>这也是为什么在Swift语言中会有<code>Decodable、Encodable、Codable</code>这样的协议。但是这样的设计可能并不符合所有人的设计，也不是每个人都需要的功能。但是良好的设计，符合SRP的设计对软件的稳定性、健壮性更有利。</p>
+<h2 id="依赖倒置原则（DIP）"><a href="#依赖倒置原则（DIP）" class="headerlink" title="依赖倒置原则（DIP）"></a>依赖倒置原则（DIP）</h2><p><strong>依赖倒置原则（DIP）</strong>表明高层模块不应该依赖底层模块，相反，他们应该依赖抽象类或接口。在模块设计中，不应该在高层模块中使用具体的底层模块。因为这样的话，高层模块将变得紧耦合底层模块。如果改变了底层模块，那么高层模块也会被修改。根据DIP原则，高层模块应该依赖抽象类或者接口，底层模块也是如此。通过面向接口（抽象类）编程，紧耦合被消除。</p>
+<p>那么什么是高层模块，什么是低层模块呢？通常情况下，我们会在一个类（高层模块）的内部实例化它依赖的对象（低层模块），这样势必造成两者的紧耦合，任何依赖对象的改变都将引起类的改变。</p>
+<p>依赖倒置原则表明高层模块、低层模块都依赖于抽象。如果我们将上述定义的协议称为<code>Fetchable</code>协议，那么在视图控制器中使用的应该是<code>Fetchable</code>协议，而不是<code>Fetcher</code>类。</p>
+<p>原因则是<strong>减少耦合。</strong>当一个类严重依赖另一个类的实现时，会发生强耦合，可能会调用很多方法，对类的内部工作做了假设，或者使用了将其绑定到特定类的变量名等。</p>
+<p>强耦合带来的直接后果是，代码库的优化和重构难上加难。例如你正在使用<code>CoreDataService</code>协议进行数据库的使用，但事后由于业务的发展等原因，你需要改用<code>RealmService</code>，此时最好的情况便是视图控制器没有强依赖<code>CoreDataService</code>。</p>
+<p>解决此问题的最佳实践是，使用同样的基协议，例如<code>DatabaseService</code>，再构建不同的数据库工具类，以实现该协议。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protocol</span> <span class="title class_">DatabaseService</span> &#123;</span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">getUsers</span>() -&gt; [<span class="type">User</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">CoreDataService</span>: <span class="title class_">DatabaseService</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> databaseService: <span class="type">DatabaseService</span> <span class="operator">=</span> <span class="type">CoreDataService</span>()</span><br></pre></td></tr></table></figure>
+
+<p>在视图控制器中使用协议实例，是因为协议比类要少。一个类会有一些特定的名称和特定的方法。另外，<strong>协议是抽象的</strong>。多个类可以实现同一个协议，使其成为减少耦合的理想选择。</p>
+<p>如果要切换到<code>RealmService</code>，需要做的就是创建一个符合相同协议的类，因为并没有依赖任何特定的实现，所有不需要在试图控制器中修改代码，节省大量时间。</p>
+<p>在软件开发的过程中，最好是对代码的组织进行提前思考，将<strong>低耦合，高内聚</strong>在每一次实现中有所体现，最终软件的稳定性和健壮性会为你带来良好的效果。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p> 以上便是<strong>S.O.L.I.D</strong>原则，我们完整从回归了五个重要的软件开发中的最佳实践，但是要说明的是，这些原则虽然非常有用，但是它们不是规则，它们是帮助你提高开发效率、增强软件稳定性、健壮性的工具。<strong>S.O.L.I.D</strong>原则的创造者罗伯特·C·马丁（Robert C. Martin）指出：“他们的陈述是’每天要吃一个苹果，才能远离医生’。”因此，请记住它们，但要妥协。</p>
+<p> <strong>Happy coding!</strong></p>
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/avatar.jpg" alt="Robin&#039;s Den"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Robin&#039;s Den</p><p class="is-size-6 is-block">Robin</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>陕西·西安</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">55</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">7</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">14</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/zycslog" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/zycslog"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/zh_robin"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.williamlong.info/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">月光博客</span></span><span class="level-right"><span class="level-item tag">www.williamlong.info</span></span></a></li><li><a class="level is-mobile" href="https://zhangferry.com/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">zhangferry</span></span><span class="level-right"><span class="level-item tag">zhangferry.com</span></span></a></li><li><a class="level is-mobile" href="https://xcanoe.top/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">轻舟</span></span><span class="level-right"><span class="level-item tag">xcanoe.top</span></span></a></li><li><a class="level is-mobile" href="https://iosdevweekly.com/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">iOS Dev Weekly</span></span><span class="level-right"><span class="level-item tag">iosdevweekly.com</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Data-Structures-Algorithms-in-Swift/"><span class="level-start"><span class="level-item">Data Structures &amp; Algorithms in Swift</span></span><span class="level-end"><span class="level-item tag">20</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/"><span class="level-start"><span class="level-item">开发知识</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/"><span class="level-start"><span class="level-item">技术人生</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"><span class="level-start"><span class="level-item">数据科学</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">机器学习</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AB%AF%E6%B5%8B%E8%AE%A1%E7%AE%97/"><span class="level-start"><span class="level-item">端测计算</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><span class="level-start"><span class="level-item">读书笔记</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-30T06:35:13.804Z">2022-04-30</time></p><p class="title"><a href="/2022/04/30/2018-08-28-coreml-vs-mlkit/">Core ML vs ML Kit：哪一个移动端机器学习框架更适合你？</a></p><p class="categories"><a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-30T06:35:13.803Z">2022-04-30</time></p><p class="title"><a href="/2022/04/30/2020-07-13-iOS-memory-manager/">Runtime剖析05 --- 再议iOS内存管理</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-30T06:35:13.802Z">2022-04-30</time></p><p class="title"><a href="/2022/04/30/2019-09-07-machine-learning-feature/">机器学习与移动应用开发的未来</a></p><p class="categories"><a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-30T06:35:13.801Z">2022-04-30</time></p><p class="title"><a href="/2022/04/30/2019-08-31-mind-flower/">思维的火花 --- 大数据与数据思维</a></p><p class="categories"><a href="/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/">技术人生</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-30T06:35:13.800Z">2022-04-30</time></p><p class="title"><a href="/2022/04/30/2019-12-01-Data-Structures-&amp;-Algorithms-in-Swift-01/">\#1\ 为什么要学习数据结构与算法</a></p><p class="categories"><a href="/categories/Data-Structures-Algorithms-in-Swift/">Data Structures &amp; Algorithms in Swift</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">48</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">一月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/02/"><span class="level-start"><span class="level-item">二月 2021</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Runtime/"><span class="tag">Runtime</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Swift%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"><span class="tag">Swift中的数据结构与算法</span><span class="tag">20</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86-iOS/"><span class="tag">开发知识 iOS</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86-%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/"><span class="tag">开发知识 技术人生</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/"><span class="tag">技术人生</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F-%E8%AF%BB%E4%B9%A6%E8%AE%A1%E5%88%92/"><span class="tag">技术人生 读书计划</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"><span class="tag">数据科学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-Python/"><span class="tag">数据科学 Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><span class="tag">机器学习</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Keras-MNIST/"><span class="tag">机器学习 Keras MNIST</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-MFCC/"><span class="tag">机器学习 MFCC</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Python/"><span class="tag">机器学习 Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AB%AF%E6%B5%8B%E8%AE%A1%E7%AE%97-CoreML/"><span class="tag">端测计算 CoreML</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><span class="tag">读书笔记</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/avatar.jpg" alt="Robin&#039;s Den" height="28"></a><p class="is-size-7"><span>&copy; 2022 Robin</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/zycslog"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

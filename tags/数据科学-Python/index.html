@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>标签: 数据科学 Python - Robin&#039;s Den</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Robin&#039;s Den"><meta name="msapplication-TileImage" content="/img/avatar.jpg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Robin&#039;s Den"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Robin，80后，主业iOS开发，移动开发者，热爱技术，学习中。很高兴能够在这里与你分享对技术对生活的思考与记录。"><meta property="og:type" content="blog"><meta property="og:title" content="Robin&#039;s Den"><meta property="og:url" content="https://zycslog.github.io/"><meta property="og:site_name" content="Robin&#039;s Den"><meta property="og:description" content="Robin，80后，主业iOS开发，移动开发者，热爱技术，学习中。很高兴能够在这里与你分享对技术对生活的思考与记录。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://zycslog.github.io/img/og_image.png"><meta property="article:author" content="Robin"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zycslog.github.io"},"headline":"Robin's Den","image":["https://zycslog.github.io/img/og_image.png"],"author":{"@type":"Person","name":"Robin"},"publisher":{"@type":"Organization","name":"Robin's Den","logo":{"@type":"ImageObject","url":"https://zycslog.github.io/img/avatar.jpg"}},"description":"Robin，80后，主业iOS开发，移动开发者，热爱技术，学习中。很高兴能够在这里与你分享对技术对生活的思考与记录。"}</script><link rel="icon" href="/img/avatar.jpg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/avatar.jpg" alt="Robin&#039;s Den" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于我</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/zycslog"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">标签</a></li><li class="is-active"><a href="#" aria-current="page">数据科学 Python</a></li></ul></nav></div></div><div class="card"><div class="card-image"><a class="image is-7by3" href="/2022/04/30/2019-11-04-simple-eda/"><img class="fill" src="/images/simple-eda/cover.png" alt="探索性数据分析入门"></a></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-30T06:33:12.093Z" title="4/30/2022, 2:33:12 PM">2022-04-30</time>发表</span><span class="level-item"><time dateTime="2022-04-30T06:33:12.094Z" title="4/30/2022, 2:33:12 PM">2022-04-30</time>更新</span><span class="level-item"> Robin </span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a></span><span class="level-item">24 分钟读完 (大约3537个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/30/2019-11-04-simple-eda/">探索性数据分析入门</a></h1><div class="content"><p>在数据科学领域里，最具挑战的问题之一便是如何确定数据对特定问题带来价值。在使用机器学习或者深度学习之前，确定数据或者特征是否利于特定问题，是数据科学后续工作的重中之重。</p>
+<p>因此，在进行数据科学问题之前，通常会对数据进行分析，洞察数据中所涵盖的深层特性是否利于特定问题，以及是否适用于所选用的机器学习算法等，而这一步被称为<strong>探索性数据分析（Exploratory Data Analysis， EDA）</strong>。</p>
+<p><strong>探索性数据分析（Exploratory Data Analysis，EDA）</strong> 是指对已有数据在尽量少的先验假设下通过作图、制表、方程拟合、计算特征量等手段探索数据的结构和规律的一种数据分析方法，该方法在上世纪70年代由美国统计学家J.K.Tukey提出。传统的统计分析方法常常先假设数据符合一种统计模型，然后依据数据样本来估计模型的一些参数及统计量，以此了解数据的特征，但实际中往往有很多数据并不符合假设的统计模型分布，这导致数据分析结果不理想。EDA则是一种更加贴合实际情况的分析方法，它强调让数据自身“说话”，通过EDA我们可以最真实、直接的观察到数据的结构及特征。</p>
+<blockquote>
+<p><strong>探索性数据分析（EDA）是一种数据分析方法，它采用多种技术来最大化对数据集的洞察力。揭示底层结构；提取重要变量；检测异常值和异常；建立简约模型；并确定最佳因子设置。</strong></p>
+</blockquote>
+<p><img src="/images/simple-eda/banner.png"></p>
+<h2 id="从实战中学习EDA"><a href="#从实战中学习EDA" class="headerlink" title="从实战中学习EDA"></a>从实战中学习EDA</h2><p><strong>实践是检验整理的唯一途径。</strong> 为了能够更好更快的理解EDA，这里将直接从**<a target="_blank" rel="noopener" href="https://archive.ics.uci.edu/ml/datasets/Iris">鸢尾花数据集(UCI Machine Learning Repository)</a>**的探索性分析中学习EDA的方法。</p>
+<p><strong>目标：</strong> 从给定4个维度特征的鸢尾花数据集中学习，已确定新的鸢尾花属于3个鸢尾花类别中的哪一个类别。</p>
+<blockquote>
+<p><strong>在进行EDA的过程中，需要始终牢记最初确立的目标，否则EDA可能偏离目标！</strong></p>
+</blockquote>
+<h3 id="导入所需类库"><a href="#导入所需类库" class="headerlink" title="导入所需类库"></a>导入所需类库</h3><p>显而易见，进行Python语言相关的开发时，第一步基本上都是导入所需的类库（前提是类库已经被安装在当前坏境）。在进行EDA时，所需的类库可能并不是很多，满足需求即可，在这里，将导入像<em>Pandas、Matplotlib、numpy</em>等类库，对应类库的作用，可自行搜索学习。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br></pre></td></tr></table></figure>
+
+<h3 id="下载数据并加载"><a href="#下载数据并加载" class="headerlink" title="下载数据并加载"></a>下载数据并加载</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;downlaod iris.csv from https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="comment">#Load Iris.csv into a pandas dataFrame.</span></span><br><span class="line">iris = pd.read_csv(<span class="string">&quot;./iris.csv&quot;</span>)</span><br><span class="line">iris.head()</span><br></pre></td></tr></table></figure>
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+<pre><code>.dataframe tbody tr th &#123;
+    vertical-align: top;
+&#125;
+
+.dataframe thead th &#123;
+    text-align: right;
+&#125;
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal_length</th>
+      <th>sepal_width</th>
+      <th>petal_length</th>
+      <th>petal_width</th>
+      <th>species</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<ul>
+<li>*.head()<em>函数是Pandas中的标准函数，用于观察数据集的数据详情，默认情况下返回数据集的前5个样本点。同时，</em>.tail()*函数返回数据集的后5个样本点。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Data-points and features</span></span><br><span class="line">iris.shape</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>(150, 5)
+</code></pre>
+<p><em>.shape</em>参数可以查看数据集的形状（行数、列数）。</p>
+<ul>
+<li>此处使用的鸢尾花数据集是一个150行和5列的数据集。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iris.info()</span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 150 entries, 0 to 149
+Data columns (total 5 columns):
+sepal_length    150 non-null float64
+sepal_width     150 non-null float64
+petal_length    150 non-null float64
+petal_width     150 non-null float64
+species         150 non-null object
+dtypes: float64(4), object(1)
+memory usage: 6.0+ KB
+</code></pre>
+<p>*.info()*函数用于展示数据集列数据的数据类型情况。</p>
+<ul>
+<li>此处，数据只有float类型和object类型两种值类型数据；</li>
+<li>无变量或列包含null值或者缺失值。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iris.columns</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>Index([&#39;sepal_length&#39;, &#39;sepal_width&#39;, &#39;petal_length&#39;, &#39;petal_width&#39;,
+       &#39;species&#39;],
+      dtype=&#39;object&#39;)
+</code></pre>
+<ul>
+<li><em>.columns</em> 用来查看数据集的列或特征的名称。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iris[<span class="string">&#x27;species&#x27;</span>].value_counts()</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>versicolor    50
+setosa        50
+virginica     50
+Name: species, dtype: int64
+</code></pre>
+<ul>
+<li>*.value_counts()*是对数据集上特定列进行降序后，获取该列的每个值的计数值；</li>
+<li>此处，每一个种类（Versicolor, Setosa, Virginica）各有50个观察对象，因此该数据集应该是<strong>均匀分布</strong>的。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iris.describe()</span><br></pre></td></tr></table></figure>
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+<pre><code>.dataframe tbody tr th &#123;
+    vertical-align: top;
+&#125;
+
+.dataframe thead th &#123;
+    text-align: right;
+&#125;
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal_length</th>
+      <th>sepal_width</th>
+      <th>petal_length</th>
+      <th>petal_width</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>150.000000</td>
+      <td>150.000000</td>
+      <td>150.000000</td>
+      <td>150.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>5.843333</td>
+      <td>3.054000</td>
+      <td>3.758667</td>
+      <td>1.198667</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.828066</td>
+      <td>0.433594</td>
+      <td>1.764420</td>
+      <td>0.763161</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>4.300000</td>
+      <td>2.000000</td>
+      <td>1.000000</td>
+      <td>0.100000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>5.100000</td>
+      <td>2.800000</td>
+      <td>1.600000</td>
+      <td>0.300000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>5.800000</td>
+      <td>3.000000</td>
+      <td>4.350000</td>
+      <td>1.300000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>6.400000</td>
+      <td>3.300000</td>
+      <td>5.100000</td>
+      <td>1.800000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>7.900000</td>
+      <td>4.400000</td>
+      <td>6.900000</td>
+      <td>2.500000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<ul>
+<li>*.describe()*函数用于获取数据集的各种汇总统计信息。该函数返回计数值、均值、标准差、最小值和最大值、以及数据的分位数。</li>
+</ul>
+<p>至此，对数据集来说已经有了一个基础的了解，对于数据的探索性分析来说，这才刚刚开始，往往通过对数据的图形化描述能够更加详细的了解数据特征之间的关系等，包括单变量和多变量分析等。</p>
+<h2 id="二维散点图"><a href="#二维散点图" class="headerlink" title="二维散点图"></a>二维散点图</h2><p>散点图是一种将数据显示为点集合的图。点的位置取决于其二维值，每个值都是水平或者垂直维度上的位置。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 2-D Scatter plot with color-coding for each flower type/class.</span></span><br><span class="line"><span class="comment"># Here &#x27;sns&#x27; corresponds to seaborn</span></span><br><span class="line">sns.set_style(<span class="string">&#x27;whitegrid&#x27;</span>)</span><br><span class="line">sns.FacetGrid(iris, hue=<span class="string">&#x27;species&#x27;</span>, height=<span class="number">8</span>) \</span><br><span class="line">    .<span class="built_in">map</span>(plt.scatter, <span class="string">&#x27;sepal_length&#x27;</span>, <span class="string">&#x27;sepal_width&#x27;</span>) \</span><br><span class="line">    .add_legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/images/simple-eda/output_21_0.png" alt="png"></p>
+<p>Seaborn中的<em>FacetGrid</em>类有助于使用多个面板在数据集的子集中可视化一个变量的分布以及多个变量之间的关系。参数<em>hue</em>根据与每个参数相关的颜色将数据点分开。</p>
+<p>三个类别的数据点根据<em>sepal_length</em>分散。</p>
+<ul>
+<li>使用<em>sepal_length</em>和<em>sepal_width</em>特征，可以区分Setosa同其他类别（线性可分）；</li>
+<li>区分Versicolor和Virginica相对困难一点，因为它们之间有大量的重叠部分。</li>
+</ul>
+<h2 id="对图"><a href="#对图" class="headerlink" title="对图"></a>对图</h2><p>对图有助于查看数据中单个变量的分布以及多个变量之间的关系。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pairwise scatter plot: Pair-Plot</span></span><br><span class="line"><span class="comment"># Dis-advantages: Cannot visualize higher dimensional patterns in 3-D and 4-D.</span></span><br><span class="line"><span class="comment"># Only possible to view 2D patterns.</span></span><br><span class="line">plt.close()</span><br><span class="line">sns.pairplot(iris, hue=<span class="string">&#x27;species&#x27;</span>, size=<span class="number">3</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/images/simple-eda/output_24_0.png" alt="png"></p>
+<ul>
+<li><em>petal_length</em>和<em>petal_width</em>是区分各种类型鸢尾花的重要特征；</li>
+<li>Setosa类型的鸢尾花很容易被识别（线性可分），Virginica和Versicolor的特征有一些重叠（接近于线性可分）；</li>
+<li>可以找到“分割线”或者“if-else”条件来建立一个简单的模型，对鸢尾花的类型进行分类。</li>
+</ul>
+<h2 id="直方图和PDF（概率密度函数）"><a href="#直方图和PDF（概率密度函数）" class="headerlink" title="直方图和PDF（概率密度函数）"></a>直方图和PDF（概率密度函数）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sns.FacetGrid(iris, hue=<span class="string">&#x27;species&#x27;</span>, height=<span class="number">8</span>) \</span><br><span class="line">    .<span class="built_in">map</span>(sns.distplot, <span class="string">&#x27;petal_length&#x27;</span>) \</span><br><span class="line">    .add_legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/images/simple-eda/output_27_0.png" alt="png"></p>
+<p><em>distplot()</em> 函数绘制了各种鸢尾花类型的<em>petal_length</em>的分布。图中蓝色代表Setosa类型鸢尾花的<em>petal_length</em>的直方图，黄色、绿色类似。y轴代表x轴上一个小窗口或者一个间隔中存在的数据点的数量，意味着在x轴上给定一个点或者区域，该点或者区域上直方图的高度代表x轴上该点或者区域有多少数据点。在上图中小窗口定义为<em>petal_length</em>。</p>
+<p>直方图的高度越高，即在给定的区域内密度越大，则找到的种类和花瓣的长度值之间的对应越多。因此上图也称为<strong>概率密度图</strong>，通过对直方图进行平滑处理（KDE）制成的图像曲线为PDF，即概率密度函数曲线。</p>
+<p><strong>结论：</strong></p>
+<ul>
+<li>如果 <code>petal_length ≤ 2</code>，种类为 Setosa；</li>
+<li>如果 <code>petal_length ＞ 2</code>，并且 <code>petal_length ≤ 4.7</code>，种类为 Versicolor；</li>
+<li>如果 <code>petal_length ≥ 4.7</code>，种类为 Virginica；</li>
+<li>另一个结论是，通过 <code>petal_length</code> 单变量的分析，对于区分不同的鸢尾花种类很有帮助，仅仅使用这一个特征，可以构建一个使用if-else条件判定的简单模型。</li>
+</ul>
+<blockquote>
+<p>在区分Versicolor的时候，使用了4.7作为分界点，而不是5的原因是， <code>petal_length ≤ 4.7</code>条件下，分类结果更多的可能性是Versicolor，而不是Virginica，这也和数据可视化的结果更为接近。</p>
+</blockquote>
+<p>当然，也可以使用<em>petal_width</em>、<em>sepal_length</em>、<em>sepal_width</em>进行单变量的分析，但是最终的结果可能并没有使用<em>petal_length</em>的结果好。</p>
+<p>PDF的局限性在于，无法查看其直观的图标或者统计性数据。例如，无法根据<em>petal_length</em>单变量分析，看到<code>petal_length ＜ 5</code>的情况下，属于Versicolor类型数据的百分比等。</p>
+<p>鉴于此，还需要使用CDF（累积分布函数）。</p>
+<h2 id="CDF（累积分布函数）"><a href="#CDF（累积分布函数）" class="headerlink" title="CDF（累积分布函数）"></a>CDF（累积分布函数）</h2><p>累积分布函数计算给定x值的累积概率。可以使用CDF来确定从总体中抽取的随机观察值小于或者等于某个值的可能性。</p>
+<p>CDF的优势在于可以通过可视化的方式查看，例如查看Setosa类型的鸢尾花，<em>petal_length</em> 小于1.6的百分比。PDF和直方图无法提供相同的确切的百分比，PDF只是分布图。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Need for Cumulative Distribution Function (CDF)</span></span><br><span class="line"><span class="comment"># We can visually see what percentage of setosa flowers have a</span></span><br><span class="line"><span class="comment"># petal_length of less than 1.6</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot CDF petal_length</span></span><br><span class="line">iris_setosa = iris.loc[iris[<span class="string">&#x27;species&#x27;</span>] == <span class="string">&#x27;setosa&#x27;</span>]</span><br><span class="line">iris_virginica = iris.loc[iris[<span class="string">&#x27;species&#x27;</span>] == <span class="string">&#x27;virginica&#x27;</span>]</span><br><span class="line">iris_versicolor = iris.loc[iris[<span class="string">&#x27;species&#x27;</span>] == <span class="string">&#x27;versicolor&#x27;</span>]</span><br><span class="line"></span><br><span class="line">counts, bin_edges = np.histogram(iris_setosa[<span class="string">&#x27;petal_length&#x27;</span>], bins=<span class="number">10</span>, density=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">pdf = counts/(<span class="built_in">sum</span>(counts))</span><br><span class="line"><span class="built_in">print</span>(pdf)</span><br><span class="line"><span class="built_in">print</span>(bin_edges)</span><br><span class="line"></span><br><span class="line"><span class="comment"># compute CDF</span></span><br><span class="line">cdf = np.cumsum(pdf)</span><br><span class="line">plt.plot(bin_edges[<span class="number">1</span>:], pdf, label=<span class="string">&#x27;PDF&#x27;</span>)</span><br><span class="line">plt.plot(bin_edges[<span class="number">1</span>:], cdf, label=<span class="string">&#x27;CDF&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<pre><code>[0.02 0.02 0.04 0.14 0.24 0.28 0.14 0.08 0.   0.04]
+[1.   1.09 1.18 1.27 1.36 1.45 1.54 1.63 1.72 1.81 1.9 ]
+</code></pre>
+<p><img src="/images/simple-eda/output_30_1.png" alt="png"></p>
+<p>示例代码中构建了三个数据框对应三种不同的鸢尾花种类。图中x轴代表<em>petal_length</em>，y轴则是对应的累积分布概率。</p>
+<p><code>cumsum()</code>函数是NumPy类库中通过PDF计算CDF的方法。</p>
+<ul>
+<li>假设<code>petal_length</code>的值我们关心的是1.6。对于1.6，数据中有接近82%的Setosa类型鸢尾花，<code>petal_length ≤ 1.6</code>。即意味着在总共50朵Setosa鸢尾花中，有41朵的<code>petal_length ≤ 1.6</code>；</li>
+<li>根据CDF也可以得到所有Setosa鸢尾花的<code>petal_length ≤ 1.9</code>。</li>
+</ul>
+<h3 id="一张图中查看三种类型鸢尾花的单变量CDF"><a href="#一张图中查看三种类型鸢尾花的单变量CDF" class="headerlink" title="一张图中查看三种类型鸢尾花的单变量CDF"></a>一张图中查看三种类型鸢尾花的单变量CDF</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Plots of CDF of petal_length for various types of flowers.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Misclassification error if you use petal_length only.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># setosa</span></span><br><span class="line">counts, bin_edges = np.histogram(iris_setosa[<span class="string">&#x27;petal_length&#x27;</span>], bins=<span class="number">10</span>, density=<span class="literal">True</span>)</span><br><span class="line">pdf = counts/(<span class="built_in">sum</span>(counts))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;setosa_pdf:&#x27;</span>, pdf)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;setosa_bin_edges:&#x27;</span>,bin_edges)</span><br><span class="line">cdf = np.cumsum(pdf)</span><br><span class="line">plt.plot(bin_edges[<span class="number">1</span>:], pdf, label=<span class="string">&#x27;setosa_pdf&#x27;</span>)</span><br><span class="line">plt.plot(bin_edges[<span class="number">1</span>:], cdf, label=<span class="string">&#x27;setosa_cdf&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># virginica</span></span><br><span class="line">counts, bin_edges = np.histogram(iris_virginica[<span class="string">&#x27;petal_length&#x27;</span>], bins=<span class="number">10</span>, density=<span class="literal">True</span>)</span><br><span class="line">pdf = counts/(<span class="built_in">sum</span>(counts))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;virginica_pdf:&#x27;</span>,pdf)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;virginica_bin_edges:&#x27;</span>,bin_edges)</span><br><span class="line">cdf = np.cumsum(pdf)</span><br><span class="line">plt.plot(bin_edges[<span class="number">1</span>:], pdf, label=<span class="string">&#x27;virginica_pdf&#x27;</span>)</span><br><span class="line">plt.plot(bin_edges[<span class="number">1</span>:], cdf, label=<span class="string">&#x27;virginica_cdf&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># versicolor</span></span><br><span class="line">counts, bin_edges = np.histogram(iris_versicolor[<span class="string">&#x27;petal_length&#x27;</span>], bins=<span class="number">10</span>, density=<span class="literal">True</span>)</span><br><span class="line">pdf = counts/(<span class="built_in">sum</span>(counts))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;versicolor_pdf:&#x27;</span>,pdf)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;versicolor_bin_edges:&#x27;</span>,bin_edges)</span><br><span class="line">cdf = np.cumsum(pdf)</span><br><span class="line">plt.plot(bin_edges[<span class="number">1</span>:], pdf, label=<span class="string">&#x27;versicolor_pdf&#x27;</span>)</span><br><span class="line">plt.plot(bin_edges[<span class="number">1</span>:], cdf, label=<span class="string">&#x27;versicolor_cdf&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<pre><code>setosa_pdf: [0.02 0.02 0.04 0.14 0.24 0.28 0.14 0.08 0.   0.04]
+setosa_bin_edges: [1.   1.09 1.18 1.27 1.36 1.45 1.54 1.63 1.72 1.81 1.9 ]
+virginica_pdf: [0.02 0.1  0.24 0.08 0.18 0.16 0.1  0.04 0.02 0.06]
+virginica_bin_edges: [4.5  4.74 4.98 5.22 5.46 5.7  5.94 6.18 6.42 6.66 6.9 ]
+versicolor_pdf: [0.02 0.04 0.06 0.04 0.16 0.14 0.12 0.2  0.14 0.08]
+versicolor_bin_edges: [3.   3.21 3.42 3.63 3.84 4.05 4.26 4.47 4.68 4.89 5.1 ]
+</code></pre>
+<p><img src="/images/simple-eda/output_32_1.png" alt="png"></p>
+<p><strong>通过可视化，可以得到如下的结论：</strong></p>
+<ul>
+<li>如果 <code>petal_length ≤ 2</code>，则鸢尾花的类型为Setosa，并且正确率接近于100%；</li>
+<li>如果 <code>petal_length ＞ 2</code>并且 <code>petal_length ≤ 5</code>：<ul>
+<li><strong>鸢尾花种类为Virginica。</strong> 此结论的正确性可能只有10%，因为在<code>petal_length = 5</code>情况下，CDF的值为10，同理，再次区间判定结果有90%的错误可能；</li>
+<li><strong>鸢尾花种类为Versicolor。</strong> 此结论的正确率为95%，因为在<code>petal_length = 5</code>时，Virginica的CDF值为95。</li>
+</ul>
+</li>
+<li>当 <code>petal_length</code>位于5到7之间，并且如果在此处将一个鸢尾花的种类定为Virginica，则正确预测该种类的可能性为90%，10%的可能性为Versicolor。</li>
+</ul>
+<h2 id="箱须图（Box-and-Whisker-Plots）"><a href="#箱须图（Box-and-Whisker-Plots）" class="headerlink" title="箱须图（Box-and-Whisker Plots）"></a>箱须图（Box-and-Whisker Plots）</h2><p>箱形图（或箱须图）以有助于变量之间比较的方式显示定量数据的分布 Box显示数据集的四分位数，而Whisker显示其余分布。</p>
+<p>箱须图是显示数据分布的一种标准化方法，该方法基于以下五个数据的摘要绘制：</p>
+<ul>
+<li>最小值</li>
+<li>最大值</li>
+<li>中位数</li>
+<li>第一个四分位数</li>
+<li>第三个四分位数</li>
+</ul>
+<p>在一个简单的箱形图中，中心矩形跨越第一个四分位数到第三个四分位数（四分位数间距或IQR）。</p>
+<p><strong>Box Plot</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Box-plot with whiskers: another method of visualizing the 1-D scatter plot more untuitivey.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># <span class="doctag">NOTE:</span> In the plot below, a technique call inter-quartile range is used in plotting the whiskers.</span></span><br><span class="line"><span class="comment"># Whiskers in the plot below donot correposnd to the min and max values.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Box-plot can be visualized as a PDF on the side-ways.</span></span><br><span class="line"></span><br><span class="line">sns.boxplot(x=<span class="string">&#x27;species&#x27;</span>, y=<span class="string">&#x27;petal_length&#x27;</span>, data=iris)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/images/simple-eda/output_35_0.png" alt="png"></p>
+<p><strong>Whisker Plot</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># A violin Plot combines the benefits of the previous two plots and simplifies them</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Denser regions of the data are fatter, and sparser ones thinner in a violin plot</span></span><br><span class="line"></span><br><span class="line">sns.violinplot(x=<span class="string">&#x27;species&#x27;</span>, y=<span class="string">&#x27;petal_length&#x27;</span>, data=iris, size=<span class="number">8</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/images/simple-eda/output_37_0.png" alt="png"></p>
+<h2 id="仓促的结语"><a href="#仓促的结语" class="headerlink" title="仓促的结语"></a>仓促的结语</h2><p>在本文中，粗略的对数据科学问题的前期工作—探索性数据分析，进行了简单的介绍，从中可以了解到如何进行数据的EDA，并从EDA中了解到数据的深层特性，对后续的特征抽取和建模具有非常大的意义。</p>
+<blockquote>
+<p>在文中，部分内容并没有深入进行介绍，与其说本文是介绍EDA，倒不如是针对EDA阶段如何一步一步的深入到数据内部的简单了解，希望对您有帮助。</p>
+</blockquote>
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/avatar.jpg" alt="Robin&#039;s Den"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Robin&#039;s Den</p><p class="is-size-6 is-block">Robin</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>陕西·西安</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">55</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">7</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">14</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/zycslog" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/zycslog"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/zh_robin"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.williamlong.info/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">月光博客</span></span><span class="level-right"><span class="level-item tag">www.williamlong.info</span></span></a></li><li><a class="level is-mobile" href="https://zhangferry.com/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">zhangferry</span></span><span class="level-right"><span class="level-item tag">zhangferry.com</span></span></a></li><li><a class="level is-mobile" href="https://xcanoe.top/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">轻舟</span></span><span class="level-right"><span class="level-item tag">xcanoe.top</span></span></a></li><li><a class="level is-mobile" href="https://iosdevweekly.com/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">iOS Dev Weekly</span></span><span class="level-right"><span class="level-item tag">iosdevweekly.com</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Data-Structures-Algorithms-in-Swift/"><span class="level-start"><span class="level-item">Data Structures &amp; Algorithms in Swift</span></span><span class="level-end"><span class="level-item tag">20</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/"><span class="level-start"><span class="level-item">开发知识</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/"><span class="level-start"><span class="level-item">技术人生</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"><span class="level-start"><span class="level-item">数据科学</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">机器学习</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AB%AF%E6%B5%8B%E8%AE%A1%E7%AE%97/"><span class="level-start"><span class="level-item">端测计算</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><span class="level-start"><span class="level-item">读书笔记</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-30T06:35:13.804Z">2022-04-30</time></p><p class="title"><a href="/2022/04/30/2018-08-28-coreml-vs-mlkit/">Core ML vs ML Kit：哪一个移动端机器学习框架更适合你？</a></p><p class="categories"><a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-30T06:35:13.803Z">2022-04-30</time></p><p class="title"><a href="/2022/04/30/2020-07-13-iOS-memory-manager/">Runtime剖析05 --- 再议iOS内存管理</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-30T06:35:13.802Z">2022-04-30</time></p><p class="title"><a href="/2022/04/30/2019-09-07-machine-learning-feature/">机器学习与移动应用开发的未来</a></p><p class="categories"><a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-30T06:35:13.801Z">2022-04-30</time></p><p class="title"><a href="/2022/04/30/2019-08-31-mind-flower/">思维的火花 --- 大数据与数据思维</a></p><p class="categories"><a href="/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/">技术人生</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-30T06:35:13.800Z">2022-04-30</time></p><p class="title"><a href="/2022/04/30/2019-12-01-Data-Structures-&amp;-Algorithms-in-Swift-01/">\#1\ 为什么要学习数据结构与算法</a></p><p class="categories"><a href="/categories/Data-Structures-Algorithms-in-Swift/">Data Structures &amp; Algorithms in Swift</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">48</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">一月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/02/"><span class="level-start"><span class="level-item">二月 2021</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Runtime/"><span class="tag">Runtime</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Swift%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"><span class="tag">Swift中的数据结构与算法</span><span class="tag">20</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86-iOS/"><span class="tag">开发知识 iOS</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86-%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/"><span class="tag">开发知识 技术人生</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/"><span class="tag">技术人生</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F-%E8%AF%BB%E4%B9%A6%E8%AE%A1%E5%88%92/"><span class="tag">技术人生 读书计划</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"><span class="tag">数据科学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6-Python/"><span class="tag">数据科学 Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><span class="tag">机器学习</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Keras-MNIST/"><span class="tag">机器学习 Keras MNIST</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-MFCC/"><span class="tag">机器学习 MFCC</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Python/"><span class="tag">机器学习 Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AB%AF%E6%B5%8B%E8%AE%A1%E7%AE%97-CoreML/"><span class="tag">端测计算 CoreML</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><span class="tag">读书笔记</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/avatar.jpg" alt="Robin&#039;s Den" height="28"></a><p class="is-size-7"><span>&copy; 2022 Robin</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/zycslog"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
