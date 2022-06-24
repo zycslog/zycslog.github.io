@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>或许是频繁切换git分支的救星--git worktree - Robin&#039;s Wo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Robin&#039;s Wo"><meta name="msapplication-TileImage" content="/img/avatar.jpg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Robin&#039;s Wo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="在实际的开发过程中，你是否也需要经常来回切换分支，如果是，那么这篇文章介绍的方法或者正合适你。 频繁切换分支的情况 场景1：协助同事  第一种场景是你正在自己的分支feature-my上做着功能的开发，这时候你的同事给你发信息说，帮忙看一个问题，分支是：feature-abc,通常的情况，你会采用以下的步骤：  通过 git stash --all 保存你的修改，或者通过 git commit -"><meta property="og:type" content="blog"><meta property="og:title" content="或许是频繁切换git分支的救星--git worktree"><meta property="og:url" content="https://zycslog.github.io/2022/06/24/2022-06-24-git-worktree/"><meta property="og:site_name" content="Robin&#039;s Wo"><meta property="og:description" content="在实际的开发过程中，你是否也需要经常来回切换分支，如果是，那么这篇文章介绍的方法或者正合适你。 频繁切换分支的情况 场景1：协助同事  第一种场景是你正在自己的分支feature-my上做着功能的开发，这时候你的同事给你发信息说，帮忙看一个问题，分支是：feature-abc,通常的情况，你会采用以下的步骤：  通过 git stash --all 保存你的修改，或者通过 git commit -"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://zycslog.github.io/images/cover/2022-06-24-git-worktree.jpg"><meta property="article:published_time" content="2022-06-24T14:59:36.292Z"><meta property="article:modified_time" content="2022-06-24T15:24:50.952Z"><meta property="article:author" content="Robin"><meta property="article:tag" content="开发知识"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/images/cover/2022-06-24-git-worktree.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zycslog.github.io/2022/06/24/2022-06-24-git-worktree/"},"headline":"或许是频繁切换git分支的救星--git worktree","image":["https://zycslog.github.io/images/cover/2022-06-24-git-worktree.jpg"],"datePublished":"2022-06-24T14:59:36.292Z","dateModified":"2022-06-24T15:24:50.952Z","author":{"@type":"Person","name":"Robin"},"publisher":{"@type":"Organization","name":"Robin's Wo","logo":{"@type":"ImageObject","url":"https://zycslog.github.io/img/avatar.jpg"}},"description":"在实际的开发过程中，你是否也需要经常来回切换分支，如果是，那么这篇文章介绍的方法或者正合适你。 频繁切换分支的情况 场景1：协助同事  第一种场景是你正在自己的分支feature-my上做着功能的开发，这时候你的同事给你发信息说，帮忙看一个问题，分支是：feature-abc,通常的情况，你会采用以下的步骤：  通过 git stash --all 保存你的修改，或者通过 git commit -"}</script><link rel="canonical" href="https://zycslog.github.io/2022/06/24/2022-06-24-git-worktree/"><link rel="alternate" href="/atom.xml" title="Robin&#039;s Wo" type="application/atom+xml"><link rel="icon" href="/img/avatar.jpg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/avatar.jpg" alt="Robin&#039;s Wo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/categories/%E6%AF%8F%E6%97%A5%E9%9A%8F%E6%83%B3/">Log</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于我</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/zycslog"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/images/cover/2022-06-24-git-worktree.jpg" alt="或许是频繁切换git分支的救星--git worktree"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-06-24T14:59:36.292Z" title="6/24/2022, 10:59:36 PM">2022-06-24</time>发表</span><span class="level-item"><time dateTime="2022-06-24T15:24:50.952Z" title="6/24/2022, 11:24:50 PM">2022-06-24</time>更新</span><span class="level-item"> Robin </span><span class="level-item"><a class="link-muted" href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/">开发知识</a></span><span class="level-item">14 分钟读完 (大约2080个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">或许是频繁切换git分支的救星--git worktree</h1><div class="content"><p>在实际的开发过程中，你是否也需要经常来回切换分支，如果是，那么这篇文章介绍的方法或者正合适你。</p>
+<h2 id="频繁切换分支的情况"><a href="#频繁切换分支的情况" class="headerlink" title="频繁切换分支的情况"></a>频繁切换分支的情况</h2><ul>
+<li><strong>场景1：协助同事</strong></li>
+</ul>
+<p>第一种场景是你正在自己的分支<code>feature-my</code>上做着功能的开发，这时候你的同事给你发信息说，帮忙看一个问题，分支是：<code>feature-abc</code>,通常的情况，你会采用以下的步骤：</p>
+<ol>
+<li>通过 <code>git stash --all</code> 保存你的修改，或者通过 <code>git commit -m a &quot;Temp&quot;</code> 做一个临时提交</li>
+<li>通过vscode，或者命令行：<code>git checkout -b feature-abc origin/feature-abc</code> 或者 <code>git swith feature-abc</code> 切换分支</li>
+<li>等待分支切换完成</li>
+<li>接着就可以在<code>feature-abc</code>正常修改，提交，推送更新，完成之后就可以切回到<code>feature-my</code>继续之前的工作</li>
+</ol>
+<p>这些都是比较常规的步骤，其中感觉比较痛苦的是第三步，有的时候需要长时间地等待。</p>
+<ul>
+<li><strong>场景2：修改bug</strong></li>
+</ul>
+<p>你已经完成了一个功能的开发，代码都已经提交并推送到服务器了，你已经在做另一个功能了，但是发现上一个功能有一个bug，急需要修复，这个时候，你又要通过上面说的步骤进行分支的来回切换</p>
+<ul>
+<li><strong>场景3：同时做着两个功能的开发</strong></li>
+</ul>
+<p>同时做着多个功能的开发，本身就不符合常规的开发流程，我们不论这个流程的问题，就说这种场景，例如，如果你的工作会经常去优化可持续集成的构建代码，确保本地的修改是否符合要求，就需要去CI系统中进行测试验证 使用过CI的同事就会知道，CI分支通常的提交信息就像下面这个：</p>
+<span id="more"></span>
+
+<p><img src="/images/git-worktree/upload_f3f58ac624e1d5c10a0ff2d8e000a50f"></p>
+<p>每一个提交都是一个小小的改动，需要推送到服务器，等待CI构建的完成。根据CI构建环境的不同，需要等待反馈结果的时间也不同。</p>
+<p>在等待的过程中，我们还可以做着需求功能开发，于是就会切换到功能分支上进行开发，待CI构建结果出来后，又返回到CI分支上，去调整相关的修改，再次推送CI构建系统进行验证，接着有重复着上面的切换分支的流程，如此往复，是否觉得繁琐呢？</p>
+<h2 id="同时在多个分支上开发"><a href="#同时在多个分支上开发" class="headerlink" title="同时在多个分支上开发"></a>同时在多个分支上开发</h2><ul>
+<li><strong>方案1：再clone一次仓库</strong></li>
+</ul>
+<p>同时在多个分支上进行开发，最原始的方式就是在另一个文件夹clone该项目，这样就可以在不同的clone下打开不同的分支。</p>
+<p><img src="/images/git-worktree/upload_7b7c83250dd4c19bee9c818c5e0d5f15"></p>
+<p>但是这种方式也有几个弊端；</p>
+<ol>
+<li><strong>重复的文件</strong>，上图所示，每一个文件夹下都有.git文件夹，包含了项目的所有修改记录，但是他们的内容是一样的</li>
+<li><strong>重复的更新操作</strong>，由于是在两个不同的文件夹，如果需要更新项目的时候，例如：git fetch或者git pull，必须重复这种操作</li>
+<li><strong>不能共享本地的分支</strong>，比如，在test_one分支上修改了文件内容，不能在另一个文件夹的项目里看到，除非将这个更改同步到服务器端，然后再另一个文件夹的项目中进行更新操作，如此也就显得有点复杂了</li>
+</ol>
+<ul>
+<li><strong>方案2：git worktree</strong></li>
+</ul>
+<p>方案2就是使用<strong>git worktree</strong>, 与方案1非常类似，但是不存在上述的缺点，接下就展示如何通过<strong>git worktree</strong>，实现同时在两个分支上进行工作。</p>
+<blockquote>
+<p>关于git worktree的相关使用帮助，可参考：<a target="_blank" rel="noopener" href="https://git-scm.com/docs/git-worktree">Git 官方文档</a>。</p>
+</blockquote>
+<h3 id="通过git-worktree-实现同时多分支开发"><a href="#通过git-worktree-实现同时多分支开发" class="headerlink" title="通过git worktree 实现同时多分支开发"></a>通过git worktree 实现同时多分支开发</h3><p>git本身就有<strong>工作树</strong>的概念，就像是你在一个目录下打开一个分支后看到的那些文件（当然不包括.git 文件夹），当你切换另一个分支时，git就会更新这个分支下的所有文件。一个仓库中可以有很多分支，但是只有一个当前分支，你可以在上面修改文件。</p>
+<p><strong>git worktree</strong>允许你同时checkout多个分支。每一个工作树都属于不同的文件夹，和多个克隆有点类似。但是不同的是，多个工作树都是链接到同一个仓库，接下来将简单地解释一下这个概念。</p>
+<h4 id="通过git-worktree管理工作树"><a href="#通过git-worktree管理工作树" class="headerlink" title="通过git worktree管理工作树"></a>通过git worktree管理工作树</h4><p>有很多种方式使用git worktree，这里我们只展示一些最基本的使用场景。</p>
+<p><strong>通过一个现有的分支创建工作树</strong></p>
+<p>在上面提到的场景中，你正在自己的分支上做着新功能的开发，这个时候你的同事需要你在他的分支上，帮他看一个问题，但是你又不像暂存你的更改，此时，你可以创建一个工作树。假如你同事的分支为other_feature，你可以在的项目根目录下，执行以下的命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git worktree add ../test_demo2 feature-test</span><br></pre></td></tr></table></figure>
+
+<p>将会看到如下的输出信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Preparing worktree (new branch &#x27;feature-test&#x27;)</span><br><span class="line">Branch &#x27;feature-test&#x27; set up to track remote branch &#x27;feature-test&#x27; from &#x27;origin&#x27;.</span><br><span class="line">HEAD is now at 22aa823 delete some unused files</span><br></pre></td></tr></table></figure>
+
+<p>git worktree 有三个参数：</p>
+<ul>
+<li><strong>add</strong> 表示创建一个新的工作树</li>
+<li><strong>..&#x2F;test_demo2</strong> 就是我们新创建的工作树的目录。由于我们是在仓库的根目录下创建的工作树，因此会创建目录test_demo2与原始仓库目录平级</li>
+</ul>
+<p><img src="/images/git-worktree/upload_81f664f59816ab30ceaae8beb461a66c"></p>
+<ul>
+<li><strong>other_feature</strong> 就是要在新工作树中checkout的分支</li>
+</ul>
+<p>运行完命令之后，将看到如下的目录结构：</p>
+<p><img src="/images/git-worktree/upload_a124c11e551d31517b592339e53bf9e8"></p>
+<p>可以看到在test_demo2中没有.git文件夹，但是有一个.git文件，该文件就是指向原始的仓库，意味着你在test_demo2文件夹中所有的更改，同样的也会在test_demo中发生更改。</p>
+<p>如果不再需要other_feature工作树的话，可以进入到test_demo目录，通过下面的命令删除</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git worktree remove ../test_demo2</span><br></pre></td></tr></table></figure>
+
+<p>将会删除test_demo2整个目录，但不会影响test_feature这个分支，只是不再会checkout feature-test分支了。</p>
+<p>如果要删除的工作树中还有未提交的更改，git将会阻止你删除，但是你可以通过–force命令参数，强制进行删除。</p>
+<p><strong>从新的分支中创建工作树</strong></p>
+<p>第二种场景，假设你需要改一个着急的bug，但是你还没有有一个分支。git worktree命令有一个 <strong>-b</strong> 命令参数，可以用来创建一个新的分支关联到新的工作树中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git worktree add ../test_demo2 origin/main -b bug_fix</span><br></pre></td></tr></table></figure>
+
+<p>通过远程origin&#x2F;main分支，创建了一个新的分支bug_fix，并在目录test_demo2进行了checkout操作，同样，也可以通过一下命令进行删除：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git worktree remove ../test_demo2</span><br></pre></td></tr></table></figure>
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>不得不说git为代码的管理带来了不可估量的高效率，几乎每一种开发中遇到的代码管理问题都能在官方文档中找到解决方式。本文也是简单的记录下git worktree的基本使用，更多详细的使用方式，可参考<a target="_blank" rel="noopener" href="https://git-scm.com/docs/git-worktree">Git 官方文档</a>，如果英文阅读比较费劲的话，可参考<a target="_blank" rel="noopener" href="https://static.kancloud.cn/apachecn/git-doc-zh/1945506">Git 中文参考</a>。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>或许是频繁切换git分支的救星--git worktree</p><p><a href="https://zycslog.github.io/2022/06/24/2022-06-24-git-worktree/">https://zycslog.github.io/2022/06/24/2022-06-24-git-worktree/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Robin</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2022-06-24</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-06-24</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/">开发知识</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/06/19/2022-05-25-runtime-again/"><span class="level-item">再议Objective-C 2.0 中的 Runtime</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://zycslog.github.io/2022/06/24/2022-06-24-git-worktree/';
+            this.page.identifier = '2022/06/24/2022-06-24-git-worktree/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'https-zycslog-github-io' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#频繁切换分支的情况"><span class="level-left"><span class="level-item">1</span><span class="level-item">频繁切换分支的情况</span></span></a></li><li><a class="level is-mobile" href="#同时在多个分支上开发"><span class="level-left"><span class="level-item">2</span><span class="level-item">同时在多个分支上开发</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#通过git-worktree-实现同时多分支开发"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">通过git worktree 实现同时多分支开发</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#通过git-worktree管理工作树"><span class="level-left"><span class="level-item">2.1.1</span><span class="level-item">通过git worktree管理工作树</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="#小结"><span class="level-left"><span class="level-item">3</span><span class="level-item">小结</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/avatar.jpg" alt="Robin&#039;s Wo"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Robin&#039;s Wo</p><p class="is-size-6 is-block">Robin</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>中国·西安</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">59</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">8</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">15</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/zycslog" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/zycslog"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/zh_robin"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Data-Structures-Algorithms-in-Swift/"><span class="level-start"><span class="level-item">Data Structures &amp; Algorithms in Swift</span></span><span class="level-end"><span class="level-item tag">20</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/"><span class="level-start"><span class="level-item">开发知识</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF%E4%BA%BA%E7%94%9F/"><span class="level-start"><span class="level-item">技术人生</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"><span class="level-start"><span class="level-item">数据科学</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">机器学习</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%AF%8F%E6%97%A5%E9%9A%8F%E6%83%B3/"><span class="level-start"><span class="level-item">每日随想</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AB%AF%E6%B5%8B%E8%AE%A1%E7%AE%97/"><span class="level-start"><span class="level-item">端测计算</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AF%BB%E4%B9%A6%E5%B0%8F%E8%AE%B0/"><span class="level-start"><span class="level-item">读书小记</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/06/"><span class="level-start"><span class="level-item">六月 2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/05/"><span class="level-start"><span class="level-item">五月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/02/"><span class="level-start"><span class="level-item">二月 2021</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li></ul></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.williamlong.info/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">月光博客</span></span><span class="level-right"><span class="level-item tag">www.williamlong.info</span></span></a></li><li><a class="level is-mobile" href="https://zhangferry.com/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">zhangferry</span></span><span class="level-right"><span class="level-item tag">zhangferry.com</span></span></a></li><li><a class="level is-mobile" href="https://xcanoe.top/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">轻舟</span></span><span class="level-right"><span class="level-item tag">xcanoe.top</span></span></a></li><li><a class="level is-mobile" href="https://iosdevweekly.com/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">iOS Dev Weekly</span></span><span class="level-right"><span class="level-item tag">iosdevweekly.com</span></span></a></li></ul></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/avatar.jpg" alt="Robin&#039;s Wo" height="28"></a><p class="is-size-7"><span>&copy; 2022 Robin</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/zycslog"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
